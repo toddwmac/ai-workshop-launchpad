@@ -1,4 +1,4 @@
-import { Cpu, LogIn, LogOut, Download } from 'lucide-react';
+import { LogIn, LogOut, Download } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { Button } from '../UI/Button';
 
@@ -25,9 +25,11 @@ export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigat
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 p-2">
-              <Cpu className="h-6 w-6 text-white" />
-            </div>
+            <img
+              src="/ai-workshop-launchpad/NewcomerPCLogo.jpeg"
+              alt="Newcomers Club of Park City"
+              className="h-12 w-auto object-contain"
+            />
             <div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
                 Newcomers AI Workshop Hub
