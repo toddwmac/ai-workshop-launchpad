@@ -154,10 +154,10 @@ export const preloadedAITools: AITool[] = [
   },
   {
     id: '5',
-    name: 'GitHub Copilot',
-    category: 'Code Assistance',
-    description: 'An AI pair programmer that suggests code completions and functions in real-time within your editor.',
-    url: 'https://github.com/features/copilot'
+    name: 'Microsoft Copilot',
+    category: 'Chatbot',
+    description: 'A great daily assistant.  Many integrations across the Windows platform and one of the highest levels of free access.  Don\'t forget to use the Microsoft Edge Copilot assistant.',
+    url: 'https://copilot.microsoft.com/'
   },
   {
     id: '6',

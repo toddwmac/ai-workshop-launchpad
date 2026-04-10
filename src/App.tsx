@@ -210,6 +210,16 @@ function App() {
           />
         </div>
 
+        <div id="ai-tools">
+          <Tools
+            tools={aiTools}
+            onEditTool={handleEditAITool}
+            isAdmin={isAuthenticated}
+            isOpen={openSections.has('ai-tools')}
+            onToggle={() => toggleSection('ai-tools')}
+          />
+        </div>
+
         <div id="prompts-and-tools">
           <MyPrompts
             prompts={userPrompts}
@@ -219,16 +229,6 @@ function App() {
             onExportPrompts={handleExportPrompts}
             isOpen={openSections.has('prompts-and-tools')}
             onToggle={() => toggleSection('prompts-and-tools')}
-          />
-        </div>
-
-        <div id="ai-tools">
-          <Tools
-            tools={aiTools}
-            onEditTool={handleEditAITool}
-            isAdmin={isAuthenticated}
-            isOpen={openSections.has('ai-tools')}
-            onToggle={() => toggleSection('ai-tools')}
           />
         </div>
 
