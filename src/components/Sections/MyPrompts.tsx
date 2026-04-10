@@ -48,7 +48,7 @@ export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, 
             <ChevronRight className="h-6 w-6 text-gray-500 dark:text-gray-400" />
           )}
           <MessageSquare className="h-6 w-6 text-green-600 dark:text-green-400" />
-          My Prompts
+          My Prompts and Tools
         </button>
         {isOpen && (
           <div className="flex gap-2">

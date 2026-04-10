@@ -7,10 +7,10 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="text-center md:text-left">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              © {new Date().getFullYear()} Newcomers Club of Park City
+              Built for Newcomers Club of Park City
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-500">
-              Powered by Applied AI Labs
+              © {new Date().getFullYear()} Applied AI Labs
             </p>
           </div>
           

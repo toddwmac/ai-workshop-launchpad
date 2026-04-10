@@ -30,7 +30,7 @@ export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigat
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-                Newcomers Workshop Demo Lab
+                Newcomers AI Workshop Hub
               </h1>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 by Applied AI Labs

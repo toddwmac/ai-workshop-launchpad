@@ -161,7 +161,7 @@ function App() {
       <main className="container mx-auto px-4 py-8">
         <div className="mb-12 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white">
           <h1 className="mb-2 text-3xl font-bold">
-            Welcome to AI Workshop Demo Lab
+            Welcome to the Workshop Hub
           </h1>
           <p className="text-blue-100">
             Your interactive learning space for exploring AI concepts, tools, and building your AI skills.
