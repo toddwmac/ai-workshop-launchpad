@@ -68,7 +68,7 @@ export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, 
           ) : (
             <ChevronRight className="h-6 w-6 text-gray-500 dark:text-gray-400" />
           )}
-          <MessageSquare className="h-6 w-6 text-green-600 dark:text-green-400" />
+          <MessageSquare className="h-6 w-6 text-brand-yellow-500 dark:text-brand-yellow-400" />
           My Prompts and Tools
         </button>
         {isOpen && (
@@ -137,7 +137,7 @@ export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, 
               className={clsx(
                 showReorder && 'cursor-grab active:cursor-grabbing',
                 draggedId === prompt.id && 'opacity-40',
-                dragOverId === prompt.id && 'ring-2 ring-blue-400 rounded-lg',
+                dragOverId === prompt.id && 'ring-2 ring-brand-blue-400 rounded-lg',
               )}
             >
             {showReorder && (
@@ -175,7 +175,7 @@ export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, 
                       href={prompt.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                      className="inline-flex items-center gap-1 text-sm font-medium text-brand-blue-500 hover:text-brand-blue-600 dark:text-brand-blue-400 dark:hover:text-brand-blue-300"
                     >
                       <span>Related Link</span>
                       <ExternalLink className="h-3 w-3" />
@@ -287,7 +287,7 @@ function PromptForm({ prompt, onSubmit, onCancel }: { prompt?: UserPrompt; onSub
             onChange={(e) => setPromptText(e.target.value)}
             placeholder="Enter your prompt..."
             rows={6}
-            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
           />
         </div>
         <Input
@@ -306,7 +306,7 @@ function PromptForm({ prompt, onSubmit, onCancel }: { prompt?: UserPrompt; onSub
             onChange={(e) => setNotes(e.target.value)}
             placeholder="Add any notes..."
             rows={3}
-            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
           />
         </div>
         <div className="flex justify-end gap-2">

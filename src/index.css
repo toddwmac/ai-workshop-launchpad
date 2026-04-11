@@ -1,6 +1,44 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-brand-blue-50: #edf6fc;
+  --color-brand-blue-100: #d6eaf8;
+  --color-brand-blue-200: #aed9f2;
+  --color-brand-blue-300: #79c2ea;
+  --color-brand-blue-400: #48a9e0;
+  --color-brand-blue-500: #3498db;
+  --color-brand-blue-600: #2c82c2;
+  --color-brand-blue-700: #246a9f;
+  --color-brand-blue-800: #1f587f;
+  --color-brand-blue-900: #1b4a68;
+  --color-brand-blue-950: #113049;
+
+  --color-brand-orange-50: #fff8f0;
+  --color-brand-orange-100: #ffeddb;
+  --color-brand-orange-200: #ffd8b5;
+  --color-brand-orange-300: #ffbe88;
+  --color-brand-orange-400: #ff9f40;
+  --color-brand-orange-500: #e88a28;
+  --color-brand-orange-600: #c8731e;
+  --color-brand-orange-700: #a85c18;
+  --color-brand-orange-800: #86491a;
+  --color-brand-orange-900: #6e3b18;
+  --color-brand-orange-950: #3b1d0a;
+
+  --color-brand-yellow-50: #fefce8;
+  --color-brand-yellow-100: #fef9c3;
+  --color-brand-yellow-200: #fef08a;
+  --color-brand-yellow-300: #fde047;
+  --color-brand-yellow-400: #f1c40f;
+  --color-brand-yellow-500: #d4aa0a;
+  --color-brand-yellow-600: #b08e08;
+  --color-brand-yellow-700: #8c7008;
+  --color-brand-yellow-800: #6e570a;
+  --color-brand-yellow-900: #584510;
+  --color-brand-yellow-950: #322505;
+}
+
 html {
   scroll-behavior: smooth;
 }

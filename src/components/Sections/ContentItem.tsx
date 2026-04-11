@@ -41,10 +41,10 @@ export function ContentItemComponent({ item, onEdit, onDelete, isAdmin, colorVar
       <div className="flex items-start gap-3">
         <div className={clsx(
           'mt-1 rounded-lg p-2',
-          item.type === 'link' ? 'bg-blue-100 dark:bg-blue-900' : 'bg-gray-100 dark:bg-gray-700'
+          item.type === 'link' ? 'bg-brand-blue-100 dark:bg-brand-blue-900' : 'bg-gray-100 dark:bg-gray-700'
         )}>
           {item.type === 'link' ? (
-            <ExternalLink className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+            <ExternalLink className="h-5 w-5 text-brand-blue-500 dark:text-brand-blue-400" />
           ) : (
             <FileText className="h-5 w-5 text-gray-600 dark:text-gray-400" />
           )}
@@ -70,7 +70,7 @@ export function ContentItemComponent({ item, onEdit, onDelete, isAdmin, colorVar
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+              className="inline-flex items-center gap-1 text-sm font-medium text-brand-blue-500 hover:text-brand-blue-600 dark:text-brand-blue-400 dark:hover:text-brand-blue-300"
             >
               <span>Visit Link</span>
               <ExternalLink className="h-3 w-3" />

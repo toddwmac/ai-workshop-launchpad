@@ -23,7 +23,7 @@ export function AuthModal({ onAuthenticate, onLogout, isAuthenticated }: AuthPro
     <Modal isOpen={!isAuthenticated} onClose={() => {}}>
       <div className="p-6">
         <div className="mb-6 flex items-center justify-center">
-          <div className="rounded-full bg-gradient-to-br from-blue-600 to-purple-600 p-4">
+          <div className="rounded-full bg-gradient-to-br from-brand-blue-500 to-brand-orange-400 p-4">
             <Lock className="h-8 w-8 text-white" />
           </div>
         </div>

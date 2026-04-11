@@ -62,7 +62,7 @@ export function Tools({ tools, onEditTool, onReorder, isAdmin, isOpen, onToggle 
           ) : (
             <ChevronRight className="h-6 w-6 text-gray-500 dark:text-gray-400" />
           )}
-          <Wrench className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+          <Wrench className="h-6 w-6 text-brand-orange-500 dark:text-brand-orange-400" />
           Popular AI Tools
         </button>
       </div>
@@ -90,7 +90,7 @@ export function Tools({ tools, onEditTool, onReorder, isAdmin, isOpen, onToggle 
             className={clsx(
               showReorder && 'cursor-grab active:cursor-grabbing',
               draggedId === tool.id && 'opacity-40',
-              dragOverId === tool.id && 'ring-2 ring-blue-400 rounded-lg',
+              dragOverId === tool.id && 'ring-2 ring-brand-blue-400 rounded-lg',
             )}
           >
             {showReorder && (
@@ -135,7 +135,7 @@ export function Tools({ tools, onEditTool, onReorder, isAdmin, isOpen, onToggle 
                 href={tool.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                className="inline-flex items-center gap-1 text-sm font-medium text-brand-blue-500 hover:text-brand-blue-600 dark:text-brand-blue-400 dark:hover:text-brand-blue-300"
               >
                 <span>Visit Tool</span>
                 <ExternalLink className="h-3 w-3" />
@@ -171,7 +171,7 @@ export function Tools({ tools, onEditTool, onReorder, isAdmin, isOpen, onToggle 
                   value={editingTool.description}
                   onChange={(e) => setEditingTool({ ...editingTool, description: e.target.value })}
                   rows={4}
-                  className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+                  className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
                 />
               </div>
               <Input

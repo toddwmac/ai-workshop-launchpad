@@ -13,9 +13,9 @@ interface CardProps {
 
 const colorStyles: Record<ColorVariant, string> = {
   default: 'border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800',
-  blue: 'border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-950',
-  green: 'border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950',
-  purple: 'border-purple-200 bg-purple-50 dark:border-purple-800 dark:bg-purple-950',
+  blue: 'border-brand-blue-200 bg-brand-blue-50 dark:border-brand-blue-800 dark:bg-brand-blue-950',
+  green: 'border-brand-yellow-200 bg-brand-yellow-50 dark:border-brand-yellow-800 dark:bg-brand-yellow-950',
+  purple: 'border-brand-orange-200 bg-brand-orange-50 dark:border-brand-orange-800 dark:bg-brand-orange-950',
 };
 
 export function Card({ children, className, hoverable, onClick, colorVariant }: CardProps) {

@@ -144,7 +144,7 @@ export function Section({ title, sectionId, content, onAddItem, onEditItem, onDe
               className={clsx(
                 isAdmin && 'cursor-grab active:cursor-grabbing',
                 draggedId === item.id && 'opacity-40',
-                dragOverId === item.id && 'ring-2 ring-blue-400 rounded-lg',
+                dragOverId === item.id && 'ring-2 ring-brand-blue-400 rounded-lg',
               )}
             >
               {isAdmin && (

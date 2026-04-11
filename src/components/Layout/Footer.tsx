@@ -18,7 +18,7 @@ export function Footer() {
             href="https://www.centerforappliedai.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+            className="flex items-center gap-1 text-sm text-gray-600 hover:text-brand-blue-500 dark:text-gray-400 dark:hover:text-brand-blue-400"
           >
             Visit Applied AI Labs
             <ExternalLink className="h-3 w-3" />
