@@ -25,7 +25,7 @@ export function generateMarkdown(data: ExportData): string {
       markdown += `### ${section.charAt(0).toUpperCase() + section.slice(1)}\n\n`;
       sectionContent.forEach((item, index) => {
         markdown += `#### ${index + 1}. ${item.title}\n`;
-        markdown += `**Type:** ${item.type}\n\n`;
+        markdown += `**Type:** ${item.type} | **Position:** ${index + 1}\n\n`;
         markdown += `${item.description}\n\n`;
         if (item.url) {
           markdown += `**Link:** ${item.url}\n\n`;
@@ -37,8 +37,8 @@ export function generateMarkdown(data: ExportData): string {
   // Glossary Terms
   if (data.glossaryTerms.length > 0) {
     markdown += `## AI Mindset Glossary\n\n`;
-    data.glossaryTerms.forEach(term => {
-      markdown += `### ${term.term}\n`;
+    data.glossaryTerms.forEach((term, index) => {
+      markdown += `### ${index + 1}. ${term.term}\n`;
       markdown += `${term.definition}\n\n`;
       markdown += `[Learn More](${term.learnMoreUrl})\n\n`;
     });
@@ -47,9 +47,9 @@ export function generateMarkdown(data: ExportData): string {
   // AI Tools
   if (data.aiTools.length > 0) {
     markdown += `## Popular AI Tools\n\n`;
-    data.aiTools.forEach(tool => {
-      markdown += `### ${tool.name}\n`;
-      markdown += `**Category:** ${tool.category}\n\n`;
+    data.aiTools.forEach((tool, index) => {
+      markdown += `### ${index + 1}. ${tool.name}\n`;
+      markdown += `**Category:** ${tool.category} | **Position:** ${index + 1}\n\n`;
       markdown += `${tool.description}\n\n`;
       markdown += `[Visit Tool](${tool.url})\n\n`;
     });

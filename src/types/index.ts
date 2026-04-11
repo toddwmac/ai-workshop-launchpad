@@ -65,6 +65,7 @@ export interface SectionProps {
   onAddItem: (item: Omit<ContentItem, 'id' | 'createdAt' | 'updatedAt'>) => void;
   onEditItem: (id: string, item: Partial<ContentItem>) => void;
   onDeleteItem: (id: string) => void;
+  onReorder: (sectionId: string, reorderedIds: string[]) => void;
   isAdmin: boolean;
 }
 
@@ -72,6 +73,7 @@ export interface SectionProps {
 export interface GlossaryProps {
   terms: GlossaryTerm[];
   onEditTerm: (id: string, term: Partial<GlossaryTerm>) => void;
+  onReorder: (reorderedIds: string[]) => void;
   isAdmin: boolean;
 }
 
@@ -79,6 +81,7 @@ export interface GlossaryProps {
 export interface ToolsProps {
   tools: AITool[];
   onEditTool: (id: string, tool: Partial<AITool>) => void;
+  onReorder: (reorderedIds: string[]) => void;
   isAdmin: boolean;
 }
 
@@ -88,6 +91,7 @@ export interface MyPromptsProps {
   onAddPrompt: (prompt: Omit<UserPrompt, 'id' | 'createdAt'>) => void;
   onEditPrompt: (id: string, prompt: Partial<UserPrompt>) => void;
   onDeletePrompt: (id: string) => void;
+  onReorder: (reorderedIds: string[]) => void;
   onExportPrompts: () => void;
 }
 

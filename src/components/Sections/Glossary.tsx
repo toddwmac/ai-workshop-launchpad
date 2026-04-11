@@ -1,19 +1,22 @@
 import { useState } from 'react';
-import { BookOpen, ExternalLink, Edit, ChevronDown, ChevronRight } from 'lucide-react';
+import { BookOpen, ExternalLink, Edit, ChevronDown, ChevronRight, GripVertical } from 'lucide-react';
 import type { GlossaryTerm, GlossaryProps } from '../../types';
 import { Card } from '../UI/Card';
 import { Button } from '../UI/Button';
 import { Modal } from '../UI/Modal';
 import { Input } from '../UI/Input';
+import clsx from 'clsx';
 
 interface GlossaryPropsWithCollapse extends GlossaryProps {
   isOpen: boolean;
   onToggle: () => void;
 }
 
-export function Glossary({ terms, onEditTerm, isAdmin, isOpen, onToggle }: GlossaryPropsWithCollapse) {
+export function Glossary({ terms, onEditTerm, onReorder, isAdmin, isOpen, onToggle }: GlossaryPropsWithCollapse) {
   const [searchTerm, setSearchTerm] = useState('');
   const [editingTerm, setEditingTerm] = useState<GlossaryTerm | undefined>();
+  const [draggedId, setDraggedId] = useState<string | null>(null);
+  const [dragOverId, setDragOverId] = useState<string | null>(null);
 
   const filteredTerms = terms.filter(term =>
     term.term.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -26,6 +29,24 @@ export function Glossary({ terms, onEditTerm, isAdmin, isOpen, onToggle }: Gloss
       setEditingTerm(undefined);
     }
   };
+
+  const handleDragStart = (id: string) => { setDraggedId(id); };
+  const handleDragOver = (e: React.DragEvent, id: string) => { e.preventDefault(); if (id !== draggedId) setDragOverId(id); };
+  const handleDragLeave = () => { setDragOverId(null); };
+  const handleDragEnd = () => { setDraggedId(null); setDragOverId(null); };
+  const handleDrop = (targetId: string) => {
+    if (!draggedId || draggedId === targetId) { setDraggedId(null); setDragOverId(null); return; }
+    const newOrder = filteredTerms.map(t => t.id);
+    const fromIdx = newOrder.indexOf(draggedId);
+    const toIdx = newOrder.indexOf(targetId);
+    newOrder.splice(fromIdx, 1);
+    newOrder.splice(toIdx, 0, draggedId);
+    onReorder(newOrder);
+    setDraggedId(null);
+    setDragOverId(null);
+  };
+
+  const showReorder = isAdmin && !searchTerm;
 
   return (
     <div className="mb-8">
@@ -56,7 +77,27 @@ export function Glossary({ terms, onEditTerm, isAdmin, isOpen, onToggle }: Gloss
 
       <div className="grid gap-4 md:grid-cols-2">
         {filteredTerms.map(term => (
-          <Card key={term.id} hoverable={isAdmin} onClick={() => isAdmin && setEditingTerm(term)}>
+          <div
+            key={term.id}
+            draggable={showReorder}
+            onDragStart={() => handleDragStart(term.id)}
+            onDragOver={(e) => handleDragOver(e, term.id)}
+            onDragLeave={handleDragLeave}
+            onDrop={() => handleDrop(term.id)}
+            onDragEnd={handleDragEnd}
+            className={clsx(
+              showReorder && 'cursor-grab active:cursor-grabbing',
+              draggedId === term.id && 'opacity-40',
+              dragOverId === term.id && 'ring-2 ring-blue-400 rounded-lg',
+            )}
+          >
+            {showReorder && (
+              <div className="mb-1 flex items-center gap-1 text-gray-400 dark:text-gray-500">
+                <GripVertical className="h-4 w-4" />
+                <span className="text-xs">Drag to reorder</span>
+              </div>
+            )}
+          <Card hoverable={isAdmin} onClick={() => isAdmin && setEditingTerm(term)}>
             <div className="flex h-full flex-col">
               <div className="mb-3 flex items-start justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -92,6 +133,7 @@ export function Glossary({ terms, onEditTerm, isAdmin, isOpen, onToggle }: Gloss
               </a>
             </div>
           </Card>
+          </div>
         ))}
       </div>
 

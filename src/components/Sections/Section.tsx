@@ -1,19 +1,23 @@
 import { useState } from 'react';
-import { Plus, ChevronDown, ChevronRight } from 'lucide-react';
+import { Plus, ChevronDown, ChevronRight, GripVertical } from 'lucide-react';
 import type { ContentItem, SectionProps } from '../../types';
 import { ContentItemComponent } from './ContentItem';
 import { ContentForm } from './ContentForm';
 import { Modal } from '../UI/Modal';
 import { Button } from '../UI/Button';
+import clsx from 'clsx';
 
 interface SectionPropsWithCollapse extends SectionProps {
   isOpen: boolean;
   onToggle: () => void;
+  onReorder: (sectionId: string, reorderedIds: string[]) => void;
 }
 
-export function Section({ title, sectionId, content, onAddItem, onEditItem, onDeleteItem, isAdmin, isOpen, onToggle }: SectionPropsWithCollapse) {
+export function Section({ title, sectionId, content, onAddItem, onEditItem, onDeleteItem, onReorder, isAdmin, isOpen, onToggle }: SectionPropsWithCollapse) {
   const [showForm, setShowForm] = useState(false);
   const [editingItem, setEditingItem] = useState<ContentItem | undefined>();
+  const [draggedId, setDraggedId] = useState<string | null>(null);
+  const [dragOverId, setDragOverId] = useState<string | null>(null);
 
   const sectionColors: Record<string, 'blue' | 'green' | 'purple'> = {
     mindset: 'blue',
@@ -42,6 +46,44 @@ export function Section({ title, sectionId, content, onAddItem, onEditItem, onDe
     if (confirm('Are you sure you want to delete this item?')) {
       onDeleteItem(id);
     }
+  };
+
+  const handleDragStart = (id: string) => {
+    setDraggedId(id);
+  };
+
+  const handleDragOver = (e: React.DragEvent, id: string) => {
+    e.preventDefault();
+    if (id !== draggedId) {
+      setDragOverId(id);
+    }
+  };
+
+  const handleDragLeave = () => {
+    setDragOverId(null);
+  };
+
+  const handleDrop = (targetId: string) => {
+    if (!draggedId || draggedId === targetId) {
+      setDraggedId(null);
+      setDragOverId(null);
+      return;
+    }
+
+    const newOrder = sectionContent.map(item => item.id);
+    const fromIdx = newOrder.indexOf(draggedId);
+    const toIdx = newOrder.indexOf(targetId);
+    newOrder.splice(fromIdx, 1);
+    newOrder.splice(toIdx, 0, draggedId);
+
+    onReorder(sectionId, newOrder);
+    setDraggedId(null);
+    setDragOverId(null);
+  };
+
+  const handleDragEnd = () => {
+    setDraggedId(null);
+    setDragOverId(null);
   };
 
   const sectionContent = content.filter(item => item.section === sectionId);
@@ -91,14 +133,34 @@ export function Section({ title, sectionId, content, onAddItem, onEditItem, onDe
       ) : (
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {sectionContent.map(item => (
-            <ContentItemComponent
+            <div
               key={item.id}
-              item={item}
-              onEdit={handleEditItem}
-              onDelete={handleDeleteItem}
-              isAdmin={isAdmin}
-              colorVariant={colorVariant}
-            />
+              draggable={isAdmin}
+              onDragStart={() => handleDragStart(item.id)}
+              onDragOver={(e) => handleDragOver(e, item.id)}
+              onDragLeave={handleDragLeave}
+              onDrop={() => handleDrop(item.id)}
+              onDragEnd={handleDragEnd}
+              className={clsx(
+                isAdmin && 'cursor-grab active:cursor-grabbing',
+                draggedId === item.id && 'opacity-40',
+                dragOverId === item.id && 'ring-2 ring-blue-400 rounded-lg',
+              )}
+            >
+              {isAdmin && (
+                <div className="mb-1 flex items-center gap-1 text-gray-400 dark:text-gray-500">
+                  <GripVertical className="h-4 w-4" />
+                  <span className="text-xs">Drag to reorder</span>
+                </div>
+              )}
+              <ContentItemComponent
+                item={item}
+                onEdit={handleEditItem}
+                onDelete={handleDeleteItem}
+                isAdmin={isAdmin}
+                colorVariant={colorVariant}
+              />
+            </div>
           ))}
         </div>
       ))}

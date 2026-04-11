@@ -1,20 +1,23 @@
 import { useState } from 'react';
-import { Wrench, ExternalLink, Edit, Tag as TagIcon, ChevronDown, ChevronRight } from 'lucide-react';
+import { Wrench, ExternalLink, Edit, Tag as TagIcon, ChevronDown, ChevronRight, GripVertical } from 'lucide-react';
 import type { AITool, ToolsProps } from '../../types';
 import { Card } from '../UI/Card';
 import { Button } from '../UI/Button';
 import { Modal } from '../UI/Modal';
 import { Input } from '../UI/Input';
 import { Tag } from '../UI/Tag';
+import clsx from 'clsx';
 
 interface ToolsPropsWithCollapse extends ToolsProps {
   isOpen: boolean;
   onToggle: () => void;
 }
 
-export function Tools({ tools, onEditTool, isAdmin, isOpen, onToggle }: ToolsPropsWithCollapse) {
+export function Tools({ tools, onEditTool, onReorder, isAdmin, isOpen, onToggle }: ToolsPropsWithCollapse) {
   const [searchTerm, setSearchTerm] = useState('');
   const [editingTool, setEditingTool] = useState<AITool | undefined>();
+  const [draggedId, setDraggedId] = useState<string | null>(null);
+  const [dragOverId, setDragOverId] = useState<string | null>(null);
 
   const filteredTools = tools.filter(tool =>
     tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -28,6 +31,24 @@ export function Tools({ tools, onEditTool, isAdmin, isOpen, onToggle }: ToolsPro
       setEditingTool(undefined);
     }
   };
+
+  const handleDragStart = (id: string) => { setDraggedId(id); };
+  const handleDragOver = (e: React.DragEvent, id: string) => { e.preventDefault(); if (id !== draggedId) setDragOverId(id); };
+  const handleDragLeave = () => { setDragOverId(null); };
+  const handleDragEnd = () => { setDraggedId(null); setDragOverId(null); };
+  const handleDrop = (targetId: string) => {
+    if (!draggedId || draggedId === targetId) { setDraggedId(null); setDragOverId(null); return; }
+    const newOrder = filteredTools.map(t => t.id);
+    const fromIdx = newOrder.indexOf(draggedId);
+    const toIdx = newOrder.indexOf(targetId);
+    newOrder.splice(fromIdx, 1);
+    newOrder.splice(toIdx, 0, draggedId);
+    onReorder(newOrder);
+    setDraggedId(null);
+    setDragOverId(null);
+  };
+
+  const showReorder = isAdmin && !searchTerm;
 
   return (
     <div className="mb-8">
@@ -58,7 +79,27 @@ export function Tools({ tools, onEditTool, isAdmin, isOpen, onToggle }: ToolsPro
 
       <div className="grid gap-4 md:grid-cols-2">
         {filteredTools.map(tool => (
-          <Card key={tool.id} hoverable={isAdmin} onClick={() => isAdmin && setEditingTool(tool)}>
+          <div
+            key={tool.id}
+            draggable={showReorder}
+            onDragStart={() => handleDragStart(tool.id)}
+            onDragOver={(e) => handleDragOver(e, tool.id)}
+            onDragLeave={handleDragLeave}
+            onDrop={() => handleDrop(tool.id)}
+            onDragEnd={handleDragEnd}
+            className={clsx(
+              showReorder && 'cursor-grab active:cursor-grabbing',
+              draggedId === tool.id && 'opacity-40',
+              dragOverId === tool.id && 'ring-2 ring-blue-400 rounded-lg',
+            )}
+          >
+            {showReorder && (
+              <div className="mb-1 flex items-center gap-1 text-gray-400 dark:text-gray-500">
+                <GripVertical className="h-4 w-4" />
+                <span className="text-xs">Drag to reorder</span>
+              </div>
+            )}
+          <Card hoverable={isAdmin} onClick={() => isAdmin && setEditingTool(tool)}>
             <div className="flex h-full flex-col">
               <div className="mb-3 flex items-start justify-between">
                 <h3 className="flex-1 text-lg font-semibold text-gray-900 dark:text-white">
@@ -101,6 +142,7 @@ export function Tools({ tools, onEditTool, isAdmin, isOpen, onToggle }: ToolsPro
               </a>
             </div>
           </Card>
+          </div>
         ))}
       </div>
 

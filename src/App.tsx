@@ -87,6 +87,25 @@ function App() {
     setContent(content.filter(item => item.id !== id));
   };
 
+  const handleReorderItems = (sectionId: string, reorderedIds: string[]) => {
+    const sectionItems = content.filter(item => item.section === sectionId);
+    const itemMap = new Map(sectionItems.map(item => [item.id, item]));
+    const reordered = reorderedIds.map(id => itemMap.get(id)!);
+    const otherItems = content.filter(item => item.section !== sectionId);
+    // Merge: other items first, then reordered section items at their original position range
+    const result: ContentItem[] = [];
+    let otherIdx = 0;
+    let reorderedIdx = 0;
+    for (const item of content) {
+      if (item.section !== sectionId) {
+        result.push(otherItems[otherIdx++]);
+      } else if (reorderedIdx < reordered.length) {
+        result.push(reordered[reorderedIdx++]);
+      }
+    }
+    setContent(result);
+  };
+
   // Glossary CRUD operations
   const handleEditGlossaryTerm = (id: string, term: Partial<GlossaryTerm>) => {
     setGlossaryTerms(glossaryTerms.map(existingTerm =>
@@ -94,11 +113,21 @@ function App() {
     ));
   };
 
+  const handleReorderGlossaryTerms = (reorderedIds: string[]) => {
+    const termMap = new Map(glossaryTerms.map(t => [t.id, t]));
+    setGlossaryTerms(reorderedIds.map(id => termMap.get(id)!));
+  };
+
   // AI Tools CRUD operations
   const handleEditAITool = (id: string, tool: Partial<AITool>) => {
     setAITools(aiTools.map(existingTool =>
       existingTool.id === id ? { ...existingTool, ...tool } : existingTool
     ));
+  };
+
+  const handleReorderAITools = (reorderedIds: string[]) => {
+    const toolMap = new Map(aiTools.map(t => [t.id, t]));
+    setAITools(reorderedIds.map(id => toolMap.get(id)!));
   };
 
   // User Prompts CRUD operations
@@ -119,6 +148,11 @@ function App() {
 
   const handleDeletePrompt = (id: string) => {
     setUserPrompts(userPrompts.filter(prompt => prompt.id !== id));
+  };
+
+  const handleReorderPrompts = (reorderedIds: string[]) => {
+    const promptMap = new Map(userPrompts.map(p => [p.id, p]));
+    setUserPrompts(reorderedIds.map(id => promptMap.get(id)!));
   };
 
   const handleExportPrompts = () => {
@@ -176,6 +210,7 @@ function App() {
             onAddItem={handleAddItem}
             onEditItem={handleEditItem}
             onDeleteItem={handleDeleteItem}
+            onReorder={handleReorderItems}
             isAdmin={isAuthenticated}
             isOpen={openSections.has('mindset')}
             onToggle={() => toggleSection('mindset')}
@@ -190,6 +225,7 @@ function App() {
             onAddItem={handleAddItem}
             onEditItem={handleEditItem}
             onDeleteItem={handleDeleteItem}
+            onReorder={handleReorderItems}
             isAdmin={isAuthenticated}
             isOpen={openSections.has('skillSet')}
             onToggle={() => toggleSection('skillSet')}
@@ -204,6 +240,7 @@ function App() {
             onAddItem={handleAddItem}
             onEditItem={handleEditItem}
             onDeleteItem={handleDeleteItem}
+            onReorder={handleReorderItems}
             isAdmin={isAuthenticated}
             isOpen={openSections.has('toolSet')}
             onToggle={() => toggleSection('toolSet')}
@@ -214,6 +251,7 @@ function App() {
           <Tools
             tools={aiTools}
             onEditTool={handleEditAITool}
+            onReorder={handleReorderAITools}
             isAdmin={isAuthenticated}
             isOpen={openSections.has('ai-tools')}
             onToggle={() => toggleSection('ai-tools')}
@@ -226,6 +264,7 @@ function App() {
             onAddPrompt={handleAddPrompt}
             onEditPrompt={handleEditPrompt}
             onDeletePrompt={handleDeletePrompt}
+            onReorder={handleReorderPrompts}
             onExportPrompts={handleExportPrompts}
             isOpen={openSections.has('prompts-and-tools')}
             onToggle={() => toggleSection('prompts-and-tools')}
@@ -236,6 +275,7 @@ function App() {
           <Glossary
             terms={glossaryTerms}
             onEditTerm={handleEditGlossaryTerm}
+            onReorder={handleReorderGlossaryTerms}
             isAdmin={isAuthenticated}
             isOpen={openSections.has('glossary')}
             onToggle={() => toggleSection('glossary')}

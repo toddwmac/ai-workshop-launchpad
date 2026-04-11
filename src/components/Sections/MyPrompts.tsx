@@ -1,22 +1,25 @@
 import { useState } from 'react';
-import { MessageSquare, Plus, Copy, Edit, Trash2, Download, ExternalLink, ChevronDown, ChevronRight } from 'lucide-react';
+import { MessageSquare, Plus, Copy, Edit, Trash2, Download, ExternalLink, ChevronDown, ChevronRight, GripVertical } from 'lucide-react';
 import type { UserPrompt, MyPromptsProps } from '../../types';
 import { Card } from '../UI/Card';
 import { Button } from '../UI/Button';
 import { Modal } from '../UI/Modal';
 import { Input } from '../UI/Input';
 import { Tag } from '../UI/Tag';
+import clsx from 'clsx';
 
 interface MyPromptsPropsWithCollapse extends MyPromptsProps {
   isOpen: boolean;
   onToggle: () => void;
 }
 
-export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, onExportPrompts, isOpen, onToggle }: MyPromptsPropsWithCollapse) {
+export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, onReorder, onExportPrompts, isOpen, onToggle }: MyPromptsPropsWithCollapse) {
   const [searchTerm, setSearchTerm] = useState('');
   const [showForm, setShowForm] = useState(false);
   const [editingPrompt, setEditingPrompt] = useState<UserPrompt | undefined>();
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [draggedId, setDraggedId] = useState<string | null>(null);
+  const [dragOverId, setDragOverId] = useState<string | null>(null);
 
   const filteredPrompts = prompts.filter(prompt =>
     prompt.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -34,6 +37,24 @@ export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, 
       onDeletePrompt(id);
     }
   };
+
+  const handleDragStart = (id: string) => { setDraggedId(id); };
+  const handleDragOver = (e: React.DragEvent, id: string) => { e.preventDefault(); if (id !== draggedId) setDragOverId(id); };
+  const handleDragLeave = () => { setDragOverId(null); };
+  const handleDragEnd = () => { setDraggedId(null); setDragOverId(null); };
+  const handleDrop = (targetId: string) => {
+    if (!draggedId || draggedId === targetId) { setDraggedId(null); setDragOverId(null); return; }
+    const newOrder = filteredPrompts.map(p => p.id);
+    const fromIdx = newOrder.indexOf(draggedId);
+    const toIdx = newOrder.indexOf(targetId);
+    newOrder.splice(fromIdx, 1);
+    newOrder.splice(toIdx, 0, draggedId);
+    onReorder(newOrder);
+    setDraggedId(null);
+    setDragOverId(null);
+  };
+
+  const showReorder = !searchTerm;
 
   return (
     <div className="mb-8">
@@ -105,7 +126,27 @@ export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, 
       ) : (
         <div className="space-y-4">
           {filteredPrompts.map(prompt => (
-            <Card key={prompt.id} className="relative">
+            <div
+              key={prompt.id}
+              draggable={showReorder}
+              onDragStart={() => handleDragStart(prompt.id)}
+              onDragOver={(e) => handleDragOver(e, prompt.id)}
+              onDragLeave={handleDragLeave}
+              onDrop={() => handleDrop(prompt.id)}
+              onDragEnd={handleDragEnd}
+              className={clsx(
+                showReorder && 'cursor-grab active:cursor-grabbing',
+                draggedId === prompt.id && 'opacity-40',
+                dragOverId === prompt.id && 'ring-2 ring-blue-400 rounded-lg',
+              )}
+            >
+            {showReorder && (
+              <div className="mb-1 flex items-center gap-1 text-gray-400 dark:text-gray-500">
+                <GripVertical className="h-4 w-4" />
+                <span className="text-xs">Drag to reorder</span>
+              </div>
+            )}
+            <Card className="relative">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                   <div className="mb-2 flex items-center gap-2">
@@ -179,6 +220,7 @@ export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, 
                 </div>
               )}
             </Card>
+            </div>
           ))}
         </div>
       )}
