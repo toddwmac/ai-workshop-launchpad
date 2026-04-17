@@ -5,7 +5,6 @@ import { Section } from './components/Sections/Section';
 import { Glossary } from './components/Sections/Glossary';
 import { Tools } from './components/Sections/Tools';
 import { MyPrompts } from './components/Sections/MyPrompts';
-import { AuthModal } from './components/Admin/AuthModal';
 import { ExportModal } from './components/Admin/ExportModal';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { useAuth } from './hooks/useAuth';
@@ -17,7 +16,6 @@ import type { ContentItem, GlossaryTerm, AITool, UserPrompt } from './types';
 function App() {
   useTheme();
   
-  const [showLogin, setShowLogin] = useState(false);
   const [showExport, setShowExport] = useState(false);
   
   const { isAuthenticated, login, logout } = useAuth();
@@ -54,14 +52,15 @@ function App() {
     }, 50);
   }, []);
 
-  const handleLoginClick = () => setShowLogin(true);
-  
-  const handleAuthenticate = (password: string) => {
-    const success = login(password);
-    if (success) {
-      setShowLogin(false);
+  const handleLoginClick = () => login('');
+
+  const handleLogout = () => {
+    const hasNewContent = content.length > 0 || glossaryTerms.length > 0 || aiTools.length > 0 || userPrompts.length > 0;
+    if (hasNewContent) {
+      const confirmed = confirm('Remember to export your content before leaving! Server-side changes could overwrite your personal additions.\n\nClick Cancel to go back and export, or OK to logout.');
+      if (!confirmed) return;
     }
-    return success;
+    logout();
   };
 
   // Content CRUD operations
@@ -211,7 +210,7 @@ function App() {
       <Header
         isAuthenticated={isAuthenticated}
         onLogin={handleLoginClick}
-        onLogout={logout}
+        onLogout={handleLogout}
         onExport={() => setShowExport(true)}
         onNavigate={navigateToSection}
       />
@@ -312,14 +311,6 @@ function App() {
       </main>
 
       <Footer />
-
-      {showLogin && (
-        <AuthModal
-          onAuthenticate={handleAuthenticate}
-          onLogout={() => setShowLogin(false)}
-          isAuthenticated={false}
-        />
-      )}
 
       <ExportModal
         isOpen={showExport}
