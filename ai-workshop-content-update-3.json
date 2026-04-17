@@ -1,0 +1,399 @@
+{
+  "version": "1.0.0",
+  "exportDate": "2026-04-17T22:01:13.797Z",
+  "content": [
+    {
+      "type": "link",
+      "title": "The Newcomer's Mind",
+      "description": "A modern take on the Beginner's Mind",
+      "url": "https://019d9c37-538e-7fa3-b4ee-9184ad2b0bdd.arena.site/",
+      "section": "mindset",
+      "id": "1776459304068",
+      "createdAt": "2026-04-17T20:55:04.068Z",
+      "updatedAt": "2026-04-17T20:55:04.068Z"
+    },
+    {
+      "id": "1776013492100",
+      "type": "link",
+      "title": "The Great Acceleration",
+      "description": "The unprecedented growth of AI in context for Academic leaders, admins and professors",
+      "url": "https://centerforappliedai.com/wp-content/uploads/2026/03/ai-development-pace-report.html",
+      "section": "mindset",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T03:50:46.897Z"
+    },
+    {
+      "id": "mindset-2",
+      "type": "link",
+      "title": "Put the AI explosion in perspective",
+      "description": "16 charts that help understand the unprecedented scale of AI investment",
+      "url": "https://www.understandingai.org/p/16-charts-that-explain-the-ai-boom?utm_source=substack&utm_medium=email",
+      "section": "mindset",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T03:50:46.897Z"
+    },
+    {
+      "type": "link",
+      "title": "State of AI in early 26",
+      "description": "Stanford's 2026 AI index",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "section": "mindset",
+      "id": "1776457311218",
+      "createdAt": "2026-04-17T20:21:51.218Z",
+      "updatedAt": "2026-04-17T21:04:22.975Z"
+    },
+    {
+      "id": "1776014010380",
+      "type": "link",
+      "title": "An AI Mindset for Higher Education",
+      "description": "A walk through of various dimensions of AI within the educational space.",
+      "url": "https://appliedailabs-higher-ed-leaders.bolt.host/",
+      "section": "mindset",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T03:50:46.897Z"
+    },
+    {
+      "id": "1776014747717",
+      "type": "link",
+      "title": "Demystifying the AI Brain",
+      "description": "An LLM's Journey from Kindergarten to PhD - \nUnderstanding the LLM Training Lifecycle Through the Lens of Human Education",
+      "url": "https://lqprzyd6r4n5.space.minimax.io/",
+      "section": "mindset",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T03:50:46.897Z"
+    },
+    {
+      "id": "1776014985273",
+      "type": "link",
+      "title": "The Art of the Collab",
+      "description": "The highest AI art form is quickly becoming ones ability to collaborate with AI and amplify skills, experience and most importantly curiosity.",
+      "section": "skillSet",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T13:26:29.853Z",
+      "url": "https://019d9993-d720-70de-ae8e-1693640621e5.arena.site/"
+    },
+    {
+      "type": "link",
+      "title": "From Tool to Partner",
+      "description": "Advancing your AI collaboration skills",
+      "url": "https://019d9993-d720-7c5a-8b53-b664111285b9.arena.site/",
+      "section": "skillSet",
+      "id": "1776457603842",
+      "createdAt": "2026-04-17T20:26:43.842Z",
+      "updatedAt": "2026-04-17T20:26:43.842Z"
+    },
+    {
+      "id": "skillset-1",
+      "type": "link",
+      "title": "Welcome to the world of Chat Bots",
+      "description": "Explore an introduction to chat bots, built by the Claude chat dev bot.  Claude like some of the other models can build artifacts and host them like this one.",
+      "url": "https://claude.ai/public/artifacts/373523d7-fbfe-45ba-a2ae-c3ca4c5cde49",
+      "section": "skillSet",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T19:21:14.485Z"
+    },
+    {
+      "id": "1776015821448",
+      "type": "link",
+      "title": "The Art of Prompting - Course",
+      "description": "When you are chatting with a chatbot (LLM) you are \"prompting\"  This skillset is evolving rapidly, but this little course will give you a solid foundation.  This was built by the Manus tool.",
+      "url": "https://prompteng-gckiicyx.manus.space/",
+      "section": "skillSet",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T19:18:40.175Z"
+    },
+    {
+      "type": "link",
+      "title": "Newcomer's Club Prompting Examples",
+      "description": "A launchpad for several different prompt example pages created by different LLMs.  It's a good way to compare prompting styles, as well as give you a sense of the range of design decisions the models might make.",
+      "url": "https://centerforappliedailabs.github.io/resources/Newcomers-activity-prompt-examples-AppliedAILabs.html",
+      "section": "skillSet",
+      "id": "1776453192186",
+      "createdAt": "2026-04-17T19:13:12.186Z",
+      "updatedAt": "2026-04-17T19:13:58.729Z"
+    },
+    {
+      "id": "toolset-1",
+      "type": "link",
+      "title": "Welcome to the World of AI Chatbots",
+      "description": "This tool, made by AI, to talk about AI, can help orient you to the most foundational element of the AI era...the AI Chat Bot",
+      "url": "https://claude.ai/public/artifacts/373523d7-fbfe-45ba-a2ae-c3ca4c5cde49",
+      "section": "toolSet",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T03:50:46.897Z"
+    },
+    {
+      "id": "toolset-2",
+      "type": "link",
+      "title": "Riding the AI Wave - How to think about tools",
+      "description": "A presentation putting mindset skill set and tool set in context.",
+      "url": "https://019d82fc-4f59-7a91-a9ec-856d92fc1646.arena.site/",
+      "section": "toolSet",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T03:50:46.897Z"
+    },
+    {
+      "id": "1776385707633",
+      "type": "link",
+      "title": "A Newcomers Guide to AI",
+      "description": "A walk though of some of the topics we discussed in our workshop",
+      "url": "https://toddwmac.github.io/ai-newcomer-guide-blink/",
+      "section": "toolSet",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T03:50:46.897Z"
+    },
+    {
+      "id": "1776385879847",
+      "type": "link",
+      "title": "Google Labs",
+      "description": "A place to explore interesting and quirky AI for teams at Google",
+      "url": "https://labs.google/",
+      "section": "toolSet",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T03:50:46.897Z"
+    },
+    {
+      "id": "1776015372838",
+      "type": "link",
+      "title": "Adaption vs. Adoption",
+      "description": "A whitepaper discussing the merits of Adapting with AI vs. strictly Adopting AI tech.",
+      "url": "https://centerforappliedailabs.github.io/resources/Adaption%20vs%20Adoption-AppliedAILabs.pdf",
+      "section": "skillSet",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T03:50:46.897Z"
+    },
+    {
+      "id": "1776013822952",
+      "type": "link",
+      "title": "The AI Revolution - Technology's Cambrian Period",
+      "description": "Visualizing the unprecedented exponential growth of AI.",
+      "url": "https://019c5da5-956e-740b-b52d-dcfc7e62da3d.arena.site/",
+      "section": "mindset",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T03:50:46.897Z"
+    },
+    {
+      "id": "1776015513476",
+      "type": "link",
+      "title": "AI & Leadership",
+      "description": "Written in early 2023, this whitepaper outlines areas of focus for leaders as the AI era begins unfolding.  Not much was written at that time, as we were just getting started.",
+      "url": "https://centerforappliedailabs.github.io/resources/Leading%20Through%20the%20Shift%20-AppliedAILabs.pdf",
+      "section": "skillSet",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T19:20:33.078Z"
+    },
+    {
+      "id": "mindset-1",
+      "type": "link",
+      "title": "The AI Mindset - a Whitepaper collection",
+      "description": "Applied AI Labs resources to help think about AI through the lens of leadership, family and collaboration.",
+      "url": "https://www.centerforappliedai.com/resources",
+      "section": "mindset",
+      "createdAt": "2026-04-17T03:50:46.897Z",
+      "updatedAt": "2026-04-17T21:07:11.182Z"
+    },
+    {
+      "type": "link",
+      "title": "Vibe Tools",
+      "description": "This list is based on tools I use.  The list is not exhaustive and many details are not current.  The tool landscape, especially in the vibe coding space, changes almost weekly.",
+      "url": "https://centerforappliedailabs.github.io/resources/Vibe%20Coding%202025%20with%20Nav-AppliedAILabs.html",
+      "section": "toolSet",
+      "id": "1776461557683",
+      "createdAt": "2026-04-17T21:32:37.683Z",
+      "updatedAt": "2026-04-17T21:32:37.683Z"
+    },
+    {
+      "type": "link",
+      "title": "LM Council a multi-model tool",
+      "description": "A unique offering in the LLM space allowing you to access multiple models (8) simultaneously and have those models to communicate amongst themselves.  there is also access to built in benchmarking data  The tool is built and managed by a very small research team in the UK,  They also host the @AIExplained YouTube channel, one of my goto research channels.  There is a limited free tier a unique experience",
+      "url": "https://lmcouncil.ai/",
+      "section": "toolSet",
+      "id": "1776461862953",
+      "createdAt": "2026-04-17T21:37:42.953Z",
+      "updatedAt": "2026-04-17T21:37:42.953Z"
+    }
+  ],
+  "glossaryTerms": [
+    {
+      "id": "1",
+      "term": "Artificial Intelligence (AI)",
+      "definition": "The simulation of human intelligence processes by computer systems, including learning, reasoning, and self-correction.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+    },
+    {
+      "id": "2",
+      "term": "Machine Learning",
+      "definition": "A subset of AI that enables systems to learn and improve from experience without being explicitly programmed.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Machine_learning"
+    },
+    {
+      "id": "3",
+      "term": "Natural Language Processing (NLP)",
+      "definition": "The interaction between computers and human language, enabling machines to understand, interpret, and generate human language.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Natural_language_processing"
+    },
+    {
+      "id": "4",
+      "term": "Large Language Model (LLM)",
+      "definition": "A type of AI model trained on vast amounts of text data to understand and generate human-like text.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Large_language_model"
+    },
+    {
+      "id": "5",
+      "term": "Prompt Engineering",
+      "definition": "The art of crafting effective inputs (prompts) to guide AI models toward desired outputs.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Prompt_engineering"
+    },
+    {
+      "id": "6",
+      "term": "Neural Network",
+      "definition": "A computing system inspired by biological neural networks, consisting of interconnected nodes (neurons) that process information.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Neural_network"
+    },
+    {
+      "id": "7",
+      "term": "Training Data",
+      "definition": "The dataset used to teach AI models patterns, relationships, and knowledge required for making predictions or decisions.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets"
+    },
+    {
+      "id": "8",
+      "term": "Inference",
+      "definition": "The process of using a trained AI model to make predictions or generate outputs based on new input data.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Inference"
+    },
+    {
+      "id": "9",
+      "term": "Hallucination",
+      "definition": "When AI generates confident but incorrect or nonsensical information that appears plausible.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)"
+    },
+    {
+      "id": "10",
+      "term": "Fine-tuning",
+      "definition": "The process of further training a pre-trained model on a specific dataset to improve its performance for particular tasks.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Fine-tuning_(transfer_learning)"
+    },
+    {
+      "id": "11",
+      "term": "Token",
+      "definition": "The basic unit of text that AI models process, which can be a word, part of a word, or character.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Tokenization_(lexical_analysis)"
+    },
+    {
+      "id": "12",
+      "term": "Temperature",
+      "definition": "A parameter that controls the randomness of AI-generated text, with lower values producing more deterministic outputs.",
+      "learnMoreUrl": "https://docs.openai.com/api-reference/parameter-details"
+    },
+    {
+      "id": "13",
+      "term": "Context Window",
+      "definition": "The maximum amount of text (in tokens) an AI model can consider when generating a response.",
+      "learnMoreUrl": "https://www.anthropic.com/index/context-window"
+    },
+    {
+      "id": "14",
+      "term": "Zero-shot Learning",
+      "definition": "The ability of AI models to perform tasks without seeing examples, using only task descriptions.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Zero-shot_learning"
+    },
+    {
+      "id": "15",
+      "term": "Few-shot Learning",
+      "definition": "A learning approach where AI models learn from just a few examples rather than extensive training data.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Few-shot_learning"
+    },
+    {
+      "id": "16",
+      "term": "Chain of Thought",
+      "definition": "A prompting technique that encourages AI models to break down complex problems into step-by-step reasoning.",
+      "learnMoreUrl": "https://arxiv.org/abs/2201.11903"
+    },
+    {
+      "id": "17",
+      "term": "Bias",
+      "definition": "Systematic errors in AI outputs that reflect prejudices present in training data or model design.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Bias_(AI)"
+    },
+    {
+      "id": "18",
+      "term": "Ethics in AI",
+      "definition": "The study of moral principles and values that should guide the development and use of AI systems.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/AI_ethics"
+    },
+    {
+      "id": "19",
+      "term": "AGI (Artificial General Intelligence)",
+      "definition": "Hypothetical AI systems with human-level or greater intelligence across all cognitive tasks.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Artificial_general_intelligence"
+    },
+    {
+      "id": "20",
+      "term": "Transformer Architecture",
+      "definition": "A deep learning architecture that uses attention mechanisms to process sequential data, revolutionizing NLP.",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)"
+    }
+  ],
+  "aiTools": [
+    {
+      "id": "1",
+      "name": "ChatGPT",
+      "category": "Chatbot",
+      "description": "A conversational AI assistant by OpenAI that can answer questions, write content, and assist with various tasks.",
+      "url": "https://chat.openai.com"
+    },
+    {
+      "id": "2",
+      "name": "Claude",
+      "category": "Chatbot",
+      "description": "An AI assistant by Anthropic designed to be helpful, harmless, and honest with strong safety features.",
+      "url": "https://claude.ai"
+    },
+    {
+      "id": "5",
+      "name": "Microsoft Copilot",
+      "category": "Chatbot",
+      "description": "A great daily assistant.  Many integrations across the Windows platform and one of the highest levels of free access.  Don't forget to use the Microsoft Edge Copilot assistant.",
+      "url": "https://copilot.microsoft.com/"
+    },
+    {
+      "id": "6",
+      "name": "Perplexity AI",
+      "category": "Research",
+      "description": "An AI-powered search engine that provides direct answers with cited sources for factual queries.",
+      "url": "https://perplexity.ai"
+    },
+    {
+      "id": "3",
+      "name": "Google Gemini",
+      "category": "Chatbot",
+      "description": "Google's family of frontier models",
+      "url": "https://gemini.google.com/app"
+    },
+    {
+      "id": "4",
+      "name": "Notebook LM",
+      "category": "Research and Learning",
+      "description": "Googles Notebook LM is a bedrock research, students and business people all around the world.",
+      "url": "https://notebooklm.google.com/"
+    }
+  ],
+  "userPrompts": [
+    {
+      "title": "How AI Learns to Talk ",
+      "prompt": "A non technical walkthrough of how large language models are created and trained",
+      "id": "1776393190265",
+      "createdAt": "2026-04-17T02:33:10.265Z",
+      "url": "https://copilot.microsoft.com/shares/artifacts/sLAzw6dFHduMyAHXYpKmp?expand=true"
+    },
+    {
+      "title": "36 Months that bent the curve and changed the world",
+      "prompt": "An animated walk through the most explosive period in human history.",
+      "url": "https://centerforappliedai.com/wp-content/uploads/2026/02/36mo-cld-web.html",
+      "notes": "Not sure where these show up",
+      "id": "1776460490563",
+      "createdAt": "2026-04-17T21:14:50.563Z"
+    }
+  ]
+}

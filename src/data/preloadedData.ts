@@ -153,28 +153,38 @@ export const preloadedAITools: AITool[] = [
     url: 'https://perplexity.ai'
   },
   {
-    id: '4',
-    name: 'Notebook LM',
-    category: 'Research and Learning',
-    description: 'Googles Notebook LM is a bedrock research, students and business people all around the world.',
-    url: 'https://notebooklm.google.com/'
-  },
-  {
     id: '3',
     name: 'Google Gemini',
     category: 'Chatbot',
     description: 'Google\'s family of frontier models',
     url: 'https://gemini.google.com/app'
+  },
+  {
+    id: '4',
+    name: 'Notebook LM',
+    category: 'Research and Learning',
+    description: 'Googles Notebook LM is a bedrock research, students and business people all around the world.',
+    url: 'https://notebooklm.google.com/'
   }
 ];
 
 export const preloadedContent: ContentItem[] = [
   {
-    id: 'mindset-1',
+    id: '1776459304068',
     type: 'link',
-    title: 'The AI Mindset Shift',
-    description: 'Applied AI Labs resources to help think about AI as a collaborator rather than a replacement.',
-    url: 'https://www.centerforappliedai.com/resources',
+    title: 'The Newcomer\'s Mind',
+    description: 'A modern take on the Beginner\'s Mind',
+    url: 'https://019d9c37-538e-7fa3-b4ee-9184ad2b0bdd.arena.site/',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776013492100',
+    type: 'link',
+    title: 'The Great Acceleration',
+    description: 'The unprecedented growth of AI in context for Academic leaders, admins and professors',
+    url: 'https://centerforappliedai.com/wp-content/uploads/2026/03/ai-development-pace-report.html',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -190,21 +200,11 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776013822952',
+    id: '1776457311218',
     type: 'link',
-    title: 'The AI Revolution - Technology\'s Cambrian Period',
-    description: 'Visualizing the unprecedented exponential growth of AI.',
-    url: 'https://019c5da5-956e-740b-b52d-dcfc7e62da3d.arena.site/',
-    section: 'mindset',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
-    id: '1776013492100',
-    type: 'link',
-    title: 'The Great Acceleration',
-    description: 'The unprecedented growth of AI in context for Academic leaders, admins and professors',
-    url: 'https://centerforappliedai.com/wp-content/uploads/2026/03/ai-development-pace-report.html',
+    title: 'State of AI in early 26',
+    description: 'Stanford\'s 2026 AI index',
+    url: 'https://hai.stanford.edu/ai-index/2026-ai-index-report',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -230,30 +230,71 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
+    id: '1776013822952',
+    type: 'link',
+    title: 'The AI Revolution - Technology\'s Cambrian Period',
+    description: 'Visualizing the unprecedented exponential growth of AI.',
+    url: 'https://019c5da5-956e-740b-b52d-dcfc7e62da3d.arena.site/',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: 'mindset-1',
+    type: 'link',
+    title: 'The AI Mindset - a Whitepaper collection',
+    description: 'Applied AI Labs resources to help think about AI through the lens of leadership, family and collaboration.',
+    url: 'https://www.centerforappliedai.com/resources',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776014985273',
+    type: 'link',
+    title: 'The Art of the Collab',
+    description: 'The highest AI art form is quickly becoming ones ability to collaborate with AI and amplify skills, experience and most importantly curiosity.',
+    url: 'https://019d9993-d720-70de-ae8e-1693640621e5.arena.site/',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776457603842',
+    type: 'link',
+    title: 'From Tool to Partner',
+    description: 'Advancing your AI collaboration skills',
+    url: 'https://019d9993-d720-7c5a-8b53-b664111285b9.arena.site/',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
     id: 'skillset-1',
     type: 'link',
     title: 'Welcome to the world of Chat Bots',
-    description: 'Explore an introductory to chat bots built by a chat bot.',
+    description: 'Explore an introduction to chat bots, built by the Claude chat dev bot.  Claude like some of the other models can build artifacts and host them like this one.',
     url: 'https://claude.ai/public/artifacts/373523d7-fbfe-45ba-a2ae-c3ca4c5cde49',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
   {
-    id: 'skillset-2',
+    id: '1776015821448',
     type: 'link',
-    title: 'Prompt Engineering Methodologies',
-    description: 'A comparative look at prompting patterns and strategies',
-    url: 'https://maqxtamwcs3g.space.minimax.io/',
+    title: 'The Art of Prompting - Course',
+    description: 'When you are chatting with a chatbot (LLM) you are "prompting"  This skillset is evolving rapidly, but this little course will give you a solid foundation.  This was built by the Manus tool.',
+    url: 'https://prompteng-gckiicyx.manus.space/',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776014985273',
-    type: 'text',
-    title: 'The Art of the Collaboration',
-    description: 'Learning to work with AI as a collaborator, is probably the most powerful skill you can develop.  When we think in terms of a "colleague", all kinds of opportunities emerge.',
+    id: '1776453192186',
+    type: 'link',
+    title: 'Newcomer\'s Club Prompting Examples',
+    description: 'A launchpad for several different prompt example pages created by different LLMs.  It\'s a good way to compare prompting styles, as well as give you a sense of the range of design decisions the models might make.',
+    url: 'https://centerforappliedailabs.github.io/resources/Newcomers-activity-prompt-examples-AppliedAILabs.html',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -272,18 +313,8 @@ export const preloadedContent: ContentItem[] = [
     id: '1776015513476',
     type: 'link',
     title: 'AI & Leadership',
-    description: 'Written in 2023, this paper outlines areas of focus for leaders as the AI era begins unfolding.',
+    description: 'Written in early 2023, this whitepaper outlines areas of focus for leaders as the AI era begins unfolding.  Not much was written at that time, as we were just getting started.',
     url: 'https://centerforappliedailabs.github.io/resources/Leading%20Through%20the%20Shift%20-AppliedAILabs.pdf',
-    section: 'skillSet',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
-    id: '1776015821448',
-    type: 'link',
-    title: 'The Art of Prompting - Course',
-    description: 'When you are chatting with a chatbot (LLM) you are "prompting"  This skillset is evolving rapidly, but this little course will give you a solid foundation.',
-    url: 'https://prompteng-gckiicyx.manus.space/',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -324,6 +355,26 @@ export const preloadedContent: ContentItem[] = [
     title: 'Google Labs',
     description: 'A place to explore interesting and quirky AI for teams at Google',
     url: 'https://labs.google/',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776461557683',
+    type: 'link',
+    title: 'Vibe Tools',
+    description: 'This list is based on tools I use.  The list is not exhaustive and many details are not current.  The tool landscape, especially in the vibe coding space, changes almost weekly.',
+    url: 'https://centerforappliedailabs.github.io/resources/Vibe%20Coding%202025%20with%20Nav-AppliedAILabs.html',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776461862953',
+    type: 'link',
+    title: 'LM Council a multi-model tool',
+    description: 'A unique offering in the LLM space allowing you to access multiple models (8) simultaneously and have those models to communicate amongst themselves.  there is also access to built in benchmarking data  The tool is built and managed by a very small research team in the UK,  They also host the @AIExplained YouTube channel, one of my goto research channels.  There is a limited free tier a unique experience',
+    url: 'https://lmcouncil.ai/',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
