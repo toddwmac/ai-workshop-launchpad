@@ -139,20 +139,6 @@ export const preloadedAITools: AITool[] = [
     url: 'https://claude.ai'
   },
   {
-    id: '3',
-    name: 'Midjourney',
-    category: 'Image Generation',
-    description: 'An AI tool that generates high-quality images from text descriptions, popular for creative projects.',
-    url: 'https://midjourney.com'
-  },
-  {
-    id: '4',
-    name: 'DALL·E 3',
-    category: 'Image Generation',
-    description: 'OpenAI\'s image generation model that creates detailed images from natural language descriptions.',
-    url: 'https://openai.com/dall-e-3'
-  },
-  {
     id: '5',
     name: 'Microsoft Copilot',
     category: 'Chatbot',
@@ -165,6 +151,20 @@ export const preloadedAITools: AITool[] = [
     category: 'Research',
     description: 'An AI-powered search engine that provides direct answers with cited sources for factual queries.',
     url: 'https://perplexity.ai'
+  },
+  {
+    id: '4',
+    name: 'Notebook LM',
+    category: 'Research and Learning',
+    description: 'Googles Notebook LM is a bedrock research, students and business people all around the world.',
+    url: 'https://notebooklm.google.com/'
+  },
+  {
+    id: '3',
+    name: 'Google Gemini',
+    category: 'Chatbot',
+    description: 'Google\'s family of frontier models',
+    url: 'https://gemini.google.com/app'
   }
 ];
 
@@ -173,17 +173,58 @@ export const preloadedContent: ContentItem[] = [
     id: 'mindset-1',
     type: 'link',
     title: 'The AI Mindset Shift',
-    description: 'Understanding how to think about AI as a collaborator rather than a replacement.',
-    url: 'https://www.centerforappliedai.com',
+    description: 'Applied AI Labs resources to help think about AI as a collaborator rather than a replacement.',
+    url: 'https://www.centerforappliedai.com/resources',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
   {
     id: 'mindset-2',
-    type: 'text',
-    title: 'Embracing Continuous Learning',
-    description: 'AI technology evolves rapidly. The most valuable skill is the ability to learn and adapt continuously.',
+    type: 'link',
+    title: 'Put the AI explosion in perspective',
+    description: '16 charts that help understand the unprecedented scale of AI investment',
+    url: 'https://www.understandingai.org/p/16-charts-that-explain-the-ai-boom?utm_source=substack&utm_medium=email',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776013822952',
+    type: 'link',
+    title: 'The AI Revolution - Technology\'s Cambrian Period',
+    description: 'Visualizing the unprecedented exponential growth of AI.',
+    url: 'https://019c5da5-956e-740b-b52d-dcfc7e62da3d.arena.site/',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776013492100',
+    type: 'link',
+    title: 'The Great Acceleration',
+    description: 'The unprecedented growth of AI in context for Academic leaders, admins and professors',
+    url: 'https://centerforappliedai.com/wp-content/uploads/2026/03/ai-development-pace-report.html',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776014010380',
+    type: 'link',
+    title: 'An AI Mindset for Higher Education',
+    description: 'A walk through of various dimensions of AI within the educational space.',
+    url: 'https://appliedailabs-higher-ed-leaders.bolt.host/',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776014747717',
+    type: 'link',
+    title: 'Demystifying the AI Brain',
+    description: 'An LLM\'s Journey from Kindergarten to PhD - \nUnderstanding the LLM Training Lifecycle Through the Lens of Human Education',
+    url: 'https://lqprzyd6r4n5.space.minimax.io/',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -191,18 +232,58 @@ export const preloadedContent: ContentItem[] = [
   {
     id: 'skillset-1',
     type: 'link',
-    title: 'Effective Prompting Guide',
-    description: 'Learn the fundamentals of crafting prompts that get the best results from AI models.',
-    url: 'https://www.promptingguide.ai',
+    title: 'Welcome to the world of Chat Bots',
+    description: 'Explore an introductory to chat bots built by a chat bot.',
+    url: 'https://claude.ai/public/artifacts/373523d7-fbfe-45ba-a2ae-c3ca4c5cde49',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
   {
     id: 'skillset-2',
+    type: 'link',
+    title: 'Prompt Engineering Methodologies',
+    description: 'A comparative look at prompting patterns and strategies',
+    url: 'https://maqxtamwcs3g.space.minimax.io/',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776014985273',
     type: 'text',
-    title: 'Critical Thinking with AI',
-    description: 'Developing the ability to verify AI outputs and think critically about AI-generated content.',
+    title: 'The Art of the Collaboration',
+    description: 'Learning to work with AI as a collaborator, is probably the most powerful skill you can develop.  When we think in terms of a "colleague", all kinds of opportunities emerge.',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776015372838',
+    type: 'link',
+    title: 'Adaption vs. Adoption',
+    description: 'A whitepaper discussing the merits of Adapting with AI vs. strictly Adopting AI tech.',
+    url: 'https://centerforappliedailabs.github.io/resources/Adaption%20vs%20Adoption-AppliedAILabs.pdf',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776015513476',
+    type: 'link',
+    title: 'AI & Leadership',
+    description: 'Written in 2023, this paper outlines areas of focus for leaders as the AI era begins unfolding.',
+    url: 'https://centerforappliedailabs.github.io/resources/Leading%20Through%20the%20Shift%20-AppliedAILabs.pdf',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776015821448',
+    type: 'link',
+    title: 'The Art of Prompting - Course',
+    description: 'When you are chatting with a chatbot (LLM) you are "prompting"  This skillset is evolving rapidly, but this little course will give you a solid foundation.',
+    url: 'https://prompteng-gckiicyx.manus.space/',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -210,18 +291,39 @@ export const preloadedContent: ContentItem[] = [
   {
     id: 'toolset-1',
     type: 'link',
-    title: 'Getting Started with Claude',
-    description: 'A beginner-friendly introduction to using Claude for everyday tasks.',
-    url: 'https://claude.ai/guide',
+    title: 'Welcome to the World of AI Chatbots',
+    description: 'This tool, made by AI, to talk about AI, can help orient you to the most foundational element of the AI era...the AI Chat Bot',
+    url: 'https://claude.ai/public/artifacts/373523d7-fbfe-45ba-a2ae-c3ca4c5cde49',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
   {
     id: 'toolset-2',
-    type: 'text',
-    title: 'Choosing the Right AI Tool',
-    description: 'A framework for selecting the best AI tool for specific tasks and use cases.',
+    type: 'link',
+    title: 'Riding the AI Wave - How to think about tools',
+    description: 'A presentation putting mindset skill set and tool set in context.',
+    url: 'https://019d82fc-4f59-7a91-a9ec-856d92fc1646.arena.site/',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776385707633',
+    type: 'link',
+    title: 'A Newcomers Guide to AI',
+    description: 'A walk though of some of the topics we discussed in our workshop',
+    url: 'https://toddwmac.github.io/ai-newcomer-guide-blink/',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776385879847',
+    type: 'link',
+    title: 'Google Labs',
+    description: 'A place to explore interesting and quirky AI for teams at Google',
+    url: 'https://labs.google/',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()

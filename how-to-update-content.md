@@ -1,1 +1,2 @@
-Use in chat:  "Follow the process in @content_update_instructions.md using @ai-workshop-content-update.json as the update source."
+Use in chat:  "Follow the process in @content\_update\_instructions.md using @ai-workshop-content-update-2.json as the update source."
+

@@ -23,7 +23,7 @@ function App() {
   const { isAuthenticated, login, logout } = useAuth();
   
   // Initialize content from local storage or preloaded data
-  const [content, setContent] = useLocalStorage<ContentItem[]>('workshop-content', preloadedContent);
+  const [content, setContent] = useLocalStorage<ContentItem[]>('workshop-content-v2', preloadedContent);
   const [glossaryTerms, setGlossaryTerms] = useLocalStorage<GlossaryTerm[]>('glossary-terms', preloadedGlossaryTerms);
   const [aiTools, setAITools] = useLocalStorage<AITool[]>('ai-tools', preloadedAITools);
   const [userPrompts, setUserPrompts] = useLocalStorage<UserPrompt[]>('user-prompts', []);
