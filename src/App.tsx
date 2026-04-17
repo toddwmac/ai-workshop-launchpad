@@ -107,6 +107,14 @@ function App() {
   };
 
   // Glossary CRUD operations
+  const handleAddGlossaryTerm = (term: Omit<GlossaryTerm, 'id'>) => {
+    const newTerm: GlossaryTerm = {
+      ...term,
+      id: Date.now().toString(),
+    };
+    setGlossaryTerms([...glossaryTerms, newTerm]);
+  };
+
   const handleEditGlossaryTerm = (id: string, term: Partial<GlossaryTerm>) => {
     setGlossaryTerms(glossaryTerms.map(existingTerm =>
       existingTerm.id === id ? { ...existingTerm, ...term } : existingTerm
@@ -118,7 +126,19 @@ function App() {
     setGlossaryTerms(reorderedIds.map(id => termMap.get(id)!));
   };
 
+  const handleDeleteGlossaryTerm = (id: string) => {
+    setGlossaryTerms(glossaryTerms.filter(term => term.id !== id));
+  };
+
   // AI Tools CRUD operations
+  const handleAddAITool = (tool: Omit<AITool, 'id'>) => {
+    const newTool: AITool = {
+      ...tool,
+      id: Date.now().toString(),
+    };
+    setAITools([...aiTools, newTool]);
+  };
+
   const handleEditAITool = (id: string, tool: Partial<AITool>) => {
     setAITools(aiTools.map(existingTool =>
       existingTool.id === id ? { ...existingTool, ...tool } : existingTool
@@ -128,6 +148,10 @@ function App() {
   const handleReorderAITools = (reorderedIds: string[]) => {
     const toolMap = new Map(aiTools.map(t => [t.id, t]));
     setAITools(reorderedIds.map(id => toolMap.get(id)!));
+  };
+
+  const handleDeleteAITool = (id: string) => {
+    setAITools(aiTools.filter(tool => tool.id !== id));
   };
 
   // User Prompts CRUD operations
@@ -250,7 +274,9 @@ function App() {
         <div id="ai-tools">
           <Tools
             tools={aiTools}
+            onAddTool={handleAddAITool}
             onEditTool={handleEditAITool}
+            onDeleteTool={handleDeleteAITool}
             onReorder={handleReorderAITools}
             isAdmin={isAuthenticated}
             isOpen={openSections.has('ai-tools')}
@@ -274,7 +300,9 @@ function App() {
         <div id="glossary">
           <Glossary
             terms={glossaryTerms}
+            onAddTerm={handleAddGlossaryTerm}
             onEditTerm={handleEditGlossaryTerm}
+            onDeleteTerm={handleDeleteGlossaryTerm}
             onReorder={handleReorderGlossaryTerms}
             isAdmin={isAuthenticated}
             isOpen={openSections.has('glossary')}

@@ -72,7 +72,9 @@ export interface SectionProps {
 // Glossary Component Props
 export interface GlossaryProps {
   terms: GlossaryTerm[];
+  onAddTerm: (term: Omit<GlossaryTerm, 'id'>) => void;
   onEditTerm: (id: string, term: Partial<GlossaryTerm>) => void;
+  onDeleteTerm: (id: string) => void;
   onReorder: (reorderedIds: string[]) => void;
   isAdmin: boolean;
 }
@@ -80,7 +82,9 @@ export interface GlossaryProps {
 // Tools Component Props
 export interface ToolsProps {
   tools: AITool[];
+  onAddTool: (tool: Omit<AITool, 'id'>) => void;
   onEditTool: (id: string, tool: Partial<AITool>) => void;
+  onDeleteTool: (id: string) => void;
   onReorder: (reorderedIds: string[]) => void;
   isAdmin: boolean;
 }

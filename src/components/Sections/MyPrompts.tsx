@@ -88,7 +88,7 @@ export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, 
               onClick={() => setShowForm(true)}
             >
               <Plus className="mr-2 h-4 w-4" />
-              Add Prompt
+              Add
             </Button>
           </div>
         )}
@@ -119,7 +119,7 @@ export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, 
               className="mt-4"
             >
               <Plus className="mr-2 h-4 w-4" />
-              Create First Prompt
+              Create First
             </Button>
           )}
         </div>
@@ -177,7 +177,7 @@ export function MyPrompts({ prompts, onAddPrompt, onEditPrompt, onDeletePrompt, 
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-sm font-medium text-brand-blue-500 hover:text-brand-blue-600 dark:text-brand-blue-400 dark:hover:text-brand-blue-300"
                     >
-                      <span>Related Link</span>
+                      <span>{prompt.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</span>
                       <ExternalLink className="h-3 w-3" />
                     </a>
                   )}
@@ -269,7 +269,7 @@ function PromptForm({ prompt, onSubmit, onCancel }: { prompt?: UserPrompt; onSub
   return (
     <div className="p-6">
       <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
-        {prompt ? 'Edit Prompt' : 'Add New Prompt'}
+        {prompt ? 'Edit Prompt or Tool' : 'Add Prompt or Tool'}
       </h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         <Input
@@ -280,12 +280,12 @@ function PromptForm({ prompt, onSubmit, onCancel }: { prompt?: UserPrompt; onSub
         />
         <div>
           <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-            Prompt
+            Prompt or Tool
           </label>
           <textarea
             value={promptText}
             onChange={(e) => setPromptText(e.target.value)}
-            placeholder="Enter your prompt..."
+            placeholder="Enter your prompt or tool..."
             rows={6}
             className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
           />
