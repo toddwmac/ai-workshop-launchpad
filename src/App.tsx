@@ -310,6 +310,10 @@ function App() {
         onLogout={handleLogout}
         onExport={() => setShowExport(true)}
         onNavigate={navigateToSection}
+        content={content}
+        glossaryTerms={glossaryTerms}
+        aiTools={aiTools}
+        userPrompts={userPrompts}
       />
 
       <main className="container mx-auto px-4 py-8">

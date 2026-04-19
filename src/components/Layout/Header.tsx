@@ -1,8 +1,10 @@
 import { LogIn, LogOut, Download, HelpCircle } from 'lucide-react';
 import { useState } from 'react';
 import { ThemeToggle } from './ThemeToggle';
+import { SearchBar } from './SearchBar';
 import { Button } from '../UI/Button';
 import { Modal } from '../UI/Modal';
+import type { ContentItem, GlossaryTerm, AITool, UserPrompt } from '../../types';
 
 const navLinks = [
   { href: '#mindset', label: 'Mindset' },
@@ -20,9 +22,13 @@ interface HeaderProps {
   onLogout: () => void;
   onExport: () => void;
   onNavigate: (id: string) => void;
+  content: ContentItem[];
+  glossaryTerms: GlossaryTerm[];
+  aiTools: AITool[];
+  userPrompts: UserPrompt[];
 }
 
-export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigate }: HeaderProps) {
+export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigate, content, glossaryTerms, aiTools, userPrompts }: HeaderProps) {
   const [showHelp, setShowHelp] = useState(false);
   const [helpTab, setHelpTab] = useState<'manage' | 'move' | 'backup' | 'vibe'>('manage');
 
@@ -48,6 +54,14 @@ export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigat
           </div>
 
           <div className="flex items-center gap-3">
+            <SearchBar
+              content={content}
+              glossaryTerms={glossaryTerms}
+              aiTools={aiTools}
+              userPrompts={userPrompts}
+              onNavigate={onNavigate}
+            />
+
             {isAuthenticated && (
               <>
                 <Button
@@ -87,7 +101,7 @@ export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigat
                 onClick={onLogin}
               >
                 <LogIn className="mr-2 h-4 w-4" />
-                Admin Login
+                Local Admin Login
               </Button>
             )}
 
@@ -143,6 +157,9 @@ export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigat
           <div className="space-y-4 text-sm text-gray-600 dark:text-gray-300">
             {helpTab === 'manage' && (
               <>
+                <p className="rounded-md bg-brand-blue-50 p-3 text-xs text-brand-blue-800 dark:bg-brand-blue-950 dark:text-brand-blue-300">
+                  All changes you make in Admin Mode affect <strong>only your browser</strong>. You cannot break or change the server — experiment freely!
+                </p>
                 <h3 className="font-semibold text-gray-900 dark:text-white">Managing Content</h3>
                 <ul className="list-inside list-disc space-y-1">
                   <li>Click <strong>Add Item</strong> in any section to create a new card</li>
@@ -176,6 +193,10 @@ export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigat
 
             {helpTab === 'backup' && (
               <>
+                <p className="rounded-md bg-brand-blue-50 p-3 text-xs text-brand-blue-800 dark:bg-brand-blue-950 dark:text-brand-blue-300">
+                  Everything you do here stays in <strong>your browser only</strong>. You cannot damage the server or affect other users — feel free to experiment!
+                </p>
+
                 <h3 className="font-semibold text-gray-900 dark:text-white">Exporting a Backup</h3>
                 <ul className="list-inside list-disc space-y-1">
                   <li>Click <strong>Content Import Export</strong> in the header</li>
@@ -193,8 +214,8 @@ export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigat
                 <h3 className="mt-4 font-semibold text-gray-900 dark:text-white">How Server Updates Work</h3>
                 <p className="mb-2">This site stores your personal additions in your browser. Here is what happens in different scenarios:</p>
                 <ul className="list-inside list-disc space-y-1">
-                  <li><strong>You add content locally:</strong> Your new cards are saved in your browser and persist across sessions</li>
-                  <li><strong>A server update is published:</strong> New or updated content from the server will replace matching items. Any cards you created that are not part of the server update are kept</li>
+                  <li><strong>You add content locally:</strong> Your new cards are saved in your browser and persist across sessions — other users are not affected</li>
+                  <li><strong>A server update is published:</strong> New or updated content from the server will replace matching items in your browser. Any cards you created that are not part of the server update are kept</li>
                   <li><strong>You export and re-import:</strong> The import merges data — your local-only items stay, and items from the file are added or updated</li>
                   <li><strong>You clear browser data:</strong> All local changes are lost. This is why regular exports are recommended</li>
                 </ul>
