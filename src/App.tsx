@@ -254,6 +254,31 @@ function App() {
     setShowExport(true);
   };
 
+  const handleImportContent = (data: { content?: ContentItem[]; glossaryTerms?: GlossaryTerm[]; aiTools?: AITool[]; userPrompts?: UserPrompt[] }) => {
+    // Merge content: update matching IDs, add new, keep local-only
+    if (data.content) {
+      const importedIds = new Set(data.content.map(c => c.id));
+      const localOnly = content.filter(c => !importedIds.has(c.id));
+      const merged = [...localOnly, ...data.content];
+      setContent(merged);
+    }
+    if (data.glossaryTerms) {
+      const importedIds = new Set(data.glossaryTerms.map(t => t.id));
+      const localOnly = glossaryTerms.filter(t => !importedIds.has(t.id));
+      setGlossaryTerms([...localOnly, ...data.glossaryTerms]);
+    }
+    if (data.aiTools) {
+      const importedIds = new Set(data.aiTools.map(t => t.id));
+      const localOnly = aiTools.filter(t => !importedIds.has(t.id));
+      setAITools([...localOnly, ...data.aiTools]);
+    }
+    if (data.userPrompts) {
+      const importedIds = new Set(data.userPrompts.map(p => p.id));
+      const localOnly = userPrompts.filter(p => !importedIds.has(p.id));
+      setUserPrompts([...localOnly, ...data.userPrompts]);
+    }
+  };
+
   const handleExportJSON = () => {
     const data = {
       version: '1.0.0',
@@ -443,6 +468,7 @@ function App() {
         onClose={() => setShowExport(false)}
         onExportJSON={handleExportJSON}
         onExportMarkdown={handleExportMarkdown}
+        onImport={handleImportContent}
       />
     </div>
   );

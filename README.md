@@ -26,7 +26,8 @@ An interactive content management SPA for the Newcomers Club of Park City's AI W
 - Paste copied/moved items into any other content section
 - Export all workshop content as JSON or Markdown
 - Markdown export includes a vibe coding prompt for building a standalone display app
-- Admin Guide with step-by-step instructions for all admin features
+- Tabbed Admin Guide (Manage Content, Copy & Move, Backup & Data, Vibe Coding) with import instructions and server update scenarios
+- Content import from JSON — merges with existing local data, keeping local-only items
 - Export reminder on exit
 
 ### User Experience
