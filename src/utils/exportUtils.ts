@@ -12,6 +12,19 @@ export function exportAsMarkdown(data: ExportData, filename: string = 'ai-worksh
 
 export function generateMarkdown(data: ExportData): string {
   let markdown = `# AI Workshop Content Export\n\n`;
+
+  markdown += `---\n\n`;
+  markdown += `## Build Your Own Display App\n\n`;
+  markdown += `Copy the prompt below and paste it into any vibe coding tool (VS Code with Copilot, Cursor, Gemini, Bolt.new, Claude, etc.) to generate a simple display-only version of this workshop content using only HTML, CSS, and JavaScript.\n\n`;
+  markdown += `> **Prompt:**\n>\n`;
+  markdown += `> Build a single-page HTML application (using only HTML, CSS, and JavaScript in one file) that displays workshop content in a clean, modern layout with dark mode support. The content is provided below as structured data. Create a responsive design with a header, collapsible sections, and card-based layout. Do not use any frameworks or external dependencies. The sections are: AI Mindset, AI Skill Set, AI Tool Set, and a Glossary. Each content item has a title, description, type (link or text), and optional URL. Glossary terms have a term, definition, and learn-more link. Use the data below to populate the page. Make it visually appealing with good typography, spacing, and color. Include a dark/light mode toggle.\n\n`;
+  markdown += `<details>\n<summary>Click to expand the content data (copy everything inside)</summary>\n\n`;
+  markdown += `\`\`\`json\n`;
+  markdown += JSON.stringify(data, null, 2);
+  markdown += `\n\`\`\`\n\n`;
+  markdown += `</details>\n\n`;
+  markdown += `---\n\n`;
+
   markdown += `**Export Date:** ${new Date(data.exportDate).toLocaleString()}\n\n`;
   markdown += `**Version:** ${data.version}\n\n`;
 

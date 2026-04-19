@@ -26,6 +26,8 @@ function App() {
   const [aiTools, setAITools] = useLocalStorage<AITool[]>('ai-tools-v2', preloadedAITools);
   const [userPrompts, setUserPrompts] = useLocalStorage<UserPrompt[]>('user-prompts', []);
   const [openSections, setOpenSections] = useState<Set<string>>(new Set());
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [clipboard, setClipboard] = useState<{ items: ContentItem[]; mode: 'copy' | 'move'; sourceSectionId: string } | null>(null);
 
   const toggleSection = useCallback((id: string) => {
     setOpenSections(prev => {
@@ -153,6 +155,76 @@ function App() {
     setAITools(aiTools.filter(tool => tool.id !== id));
   };
 
+  // Selection and clipboard operations
+  const handleToggleSelect = (id: string) => {
+    const item = content.find(c => c.id === id);
+    if (!item) return;
+    setSelectedIds(prev => {
+      const next = new Set<string>();
+      const currentSection = content.find(c => prev.has(c.id))?.section;
+      if (currentSection && currentSection !== item.section) {
+        // Switching sections — start fresh with just this item
+        next.add(id);
+      } else {
+        prev.forEach(i => next.add(i));
+        if (next.has(id)) {
+          next.delete(id);
+        } else {
+          next.add(id);
+        }
+      }
+      return next;
+    });
+  };
+
+  const handleSelectAll = (sectionId: string) => {
+    const sectionItemIds = content.filter(c => c.section === sectionId).map(c => c.id);
+    setSelectedIds(new Set(sectionItemIds));
+  };
+
+  const handleClearSelection = () => {
+    setSelectedIds(new Set());
+  };
+
+  const handleCopySelected = (_sectionId: string) => {
+    const items = content.filter(c => selectedIds.has(c.id));
+    const sourceSection = items[0]?.section || _sectionId;
+    setClipboard({ items, mode: 'copy', sourceSectionId: sourceSection });
+    setSelectedIds(new Set());
+  };
+
+  const handleMoveSelected = (_sectionId: string) => {
+    const items = content.filter(c => selectedIds.has(c.id));
+    const sourceSection = items[0]?.section || _sectionId;
+    setClipboard({ items, mode: 'move', sourceSectionId: sourceSection });
+    setSelectedIds(new Set());
+  };
+
+  const handleDeleteSelected = (_sectionId: string) => {
+    if (confirm(`Delete ${selectedIds.size} selected item${selectedIds.size > 1 ? 's' : ''}?`)) {
+      setContent(content.filter(c => !selectedIds.has(c.id)));
+      setSelectedIds(new Set());
+    }
+  };
+
+  const handlePasteItems = (targetSectionId: 'mindset' | 'skillSet' | 'toolSet' | 'learningResources') => {
+    if (!clipboard) return;
+    const newItems: ContentItem[] = clipboard.items.map((item, i) => ({
+      ...item,
+      id: (Date.now() + i).toString(),
+      section: targetSectionId,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    }));
+    let updated = [...content, ...newItems];
+    if (clipboard.mode === 'move') {
+      const movedIds = new Set(clipboard.items.map(i => i.id));
+      updated = updated.filter(c => !movedIds.has(c.id));
+    }
+    setContent(updated);
+    setClipboard(null);
+  };
+
   // User Prompts CRUD operations
   const handleAddPrompt = (prompt: Omit<UserPrompt, 'id' | 'createdAt'>) => {
     const newPrompt: UserPrompt = {
@@ -220,8 +292,11 @@ function App() {
           <h1 className="mb-2 text-3xl font-bold">
             Welcome to the Workshop Hub
           </h1>
-          <p className="text-brand-blue-100">
+          <p className="text-black">
             Your interactive learning space for exploring AI concepts, tools, and building your AI skills.
+          </p>
+          <p className="mt-2 text-black">
+            All of the content is free and nothing loads on your machine.
           </p>
         </div>
 
@@ -235,6 +310,15 @@ function App() {
             onDeleteItem={handleDeleteItem}
             onReorder={handleReorderItems}
             isAdmin={isAuthenticated}
+            selectedIds={selectedIds}
+            clipboard={clipboard}
+            onToggleSelect={handleToggleSelect}
+            onSelectAll={handleSelectAll}
+            onClearSelection={handleClearSelection}
+            onCopySelected={handleCopySelected}
+            onMoveSelected={handleMoveSelected}
+            onDeleteSelected={handleDeleteSelected}
+            onPasteItems={handlePasteItems}
             isOpen={openSections.has('mindset')}
             onToggle={() => toggleSection('mindset')}
           />
@@ -250,6 +334,15 @@ function App() {
             onDeleteItem={handleDeleteItem}
             onReorder={handleReorderItems}
             isAdmin={isAuthenticated}
+            selectedIds={selectedIds}
+            clipboard={clipboard}
+            onToggleSelect={handleToggleSelect}
+            onSelectAll={handleSelectAll}
+            onClearSelection={handleClearSelection}
+            onCopySelected={handleCopySelected}
+            onMoveSelected={handleMoveSelected}
+            onDeleteSelected={handleDeleteSelected}
+            onPasteItems={handlePasteItems}
             isOpen={openSections.has('skillSet')}
             onToggle={() => toggleSection('skillSet')}
           />
@@ -265,6 +358,15 @@ function App() {
             onDeleteItem={handleDeleteItem}
             onReorder={handleReorderItems}
             isAdmin={isAuthenticated}
+            selectedIds={selectedIds}
+            clipboard={clipboard}
+            onToggleSelect={handleToggleSelect}
+            onSelectAll={handleSelectAll}
+            onClearSelection={handleClearSelection}
+            onCopySelected={handleCopySelected}
+            onMoveSelected={handleMoveSelected}
+            onDeleteSelected={handleDeleteSelected}
+            onPasteItems={handlePasteItems}
             isOpen={openSections.has('toolSet')}
             onToggle={() => toggleSection('toolSet')}
           />
@@ -280,6 +382,15 @@ function App() {
             onDeleteItem={handleDeleteItem}
             onReorder={handleReorderItems}
             isAdmin={isAuthenticated}
+            selectedIds={selectedIds}
+            clipboard={clipboard}
+            onToggleSelect={handleToggleSelect}
+            onSelectAll={handleSelectAll}
+            onClearSelection={handleClearSelection}
+            onCopySelected={handleCopySelected}
+            onMoveSelected={handleMoveSelected}
+            onDeleteSelected={handleDeleteSelected}
+            onPasteItems={handlePasteItems}
             isOpen={openSections.has('learningResources')}
             onToggle={() => toggleSection('learningResources')}
           />

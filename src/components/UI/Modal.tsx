@@ -43,9 +43,9 @@ export function Modal({ isOpen, onClose, title, children, size = 'md' }: ModalPr
         onClick={onClose}
         aria-hidden="true"
       />
-      <div 
+      <div
         className={clsx(
-          'relative z-50 w-full rounded-lg bg-white shadow-xl dark:bg-gray-800',
+          'relative z-50 mx-4 w-full rounded-lg bg-white shadow-xl dark:bg-gray-800',
           'max-h-[90vh] overflow-y-auto',
           sizes[size]
         )}

@@ -60,6 +60,8 @@ export interface ExportData {
 // Section Component Props
 export interface SectionProps {
   title: string;
+  subtitle?: string;
+  subtitleTag?: string;
   sectionId: 'mindset' | 'skillSet' | 'toolSet' | 'learningResources';
   content: ContentItem[];
   onAddItem: (item: Omit<ContentItem, 'id' | 'createdAt' | 'updatedAt'>) => void;
@@ -67,6 +69,15 @@ export interface SectionProps {
   onDeleteItem: (id: string) => void;
   onReorder: (sectionId: string, reorderedIds: string[]) => void;
   isAdmin: boolean;
+  selectedIds: Set<string>;
+  clipboard: { items: ContentItem[]; mode: 'copy' | 'move'; sourceSectionId: string } | null;
+  onToggleSelect: (id: string) => void;
+  onSelectAll: (sectionId: string) => void;
+  onClearSelection: () => void;
+  onCopySelected: (sectionId: string) => void;
+  onMoveSelected: (sectionId: string) => void;
+  onDeleteSelected: (sectionId: string) => void;
+  onPasteItems: (targetSectionId: 'mindset' | 'skillSet' | 'toolSet' | 'learningResources') => void;
 }
 
 // Glossary Component Props
