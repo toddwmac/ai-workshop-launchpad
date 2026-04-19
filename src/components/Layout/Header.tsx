@@ -6,7 +6,7 @@ const navLinks = [
   { href: '#mindset', label: 'Mindset' },
   { href: '#skillSet', label: 'Skill Set' },
   { href: '#toolSet', label: 'Tool Set' },
-  { href: '#learningResources', label: 'Learning Resources' },
+  { href: '#learningResources', label: 'Other Resources' },
   { href: '#ai-tools', label: 'AI Tools' },
   { href: '#prompts-and-tools', label: 'My Prompts and Tools' },
   { href: '#glossary', label: 'Glossary' },

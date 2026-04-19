@@ -11,9 +11,11 @@ interface SectionPropsWithCollapse extends SectionProps {
   isOpen: boolean;
   onToggle: () => void;
   onReorder: (sectionId: string, reorderedIds: string[]) => void;
+  subtitle?: string;
+  subtitleTag?: string;
 }
 
-export function Section({ title, sectionId, content, onAddItem, onEditItem, onDeleteItem, onReorder, isAdmin, isOpen, onToggle }: SectionPropsWithCollapse) {
+export function Section({ title, sectionId, content, onAddItem, onEditItem, onDeleteItem, onReorder, isAdmin, isOpen, onToggle, subtitle, subtitleTag }: SectionPropsWithCollapse) {
   const [showForm, setShowForm] = useState(false);
   const [editingItem, setEditingItem] = useState<ContentItem | undefined>();
   const [draggedId, setDraggedId] = useState<string | null>(null);
@@ -102,6 +104,11 @@ export function Section({ title, sectionId, content, onAddItem, onEditItem, onDe
             <ChevronRight className="h-6 w-6 text-gray-500 dark:text-gray-400" />
           )}
           {title}
+          {subtitle && (
+            <span className="text-lg font-normal text-gray-700 dark:text-gray-300">
+              — {subtitle} <span className="italic">({subtitleTag})</span>
+            </span>
+          )}
         </button>
         {isAdmin && isOpen && (
           <Button

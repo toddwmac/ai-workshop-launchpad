@@ -227,7 +227,7 @@ function App() {
 
         <div id="mindset">
           <Section
-            title="AI Mindset"
+            title="AI Mindset" subtitle="How we think about AI" subtitleTag="durable and grounding"
             sectionId="mindset"
             content={content}
             onAddItem={handleAddItem}
@@ -242,7 +242,7 @@ function App() {
 
         <div id="skillSet">
           <Section
-            title="AI Skill Set"
+            title="AI Skill Set" subtitle="What we can do with AI" subtitleTag="dynamic and transferable"
             sectionId="skillSet"
             content={content}
             onAddItem={handleAddItem}
@@ -257,7 +257,7 @@ function App() {
 
         <div id="toolSet">
           <Section
-            title="AI Tool Set"
+            title="AI Tool Set" subtitle="What tools we use" subtitleTag="fluid and responsive"
             sectionId="toolSet"
             content={content}
             onAddItem={handleAddItem}
@@ -272,7 +272,7 @@ function App() {
 
         <div id="learningResources">
           <Section
-            title="AI Learning Resources"
+            title="Other Resources"
             sectionId="learningResources"
             content={content}
             onAddItem={handleAddItem}
