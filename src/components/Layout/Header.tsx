@@ -77,7 +77,7 @@ export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigat
                 onClick={onLogout}
               >
                 <LogOut className="mr-2 h-4 w-4" />
-                Logout
+                Exit Admin Mode
               </Button>
             ) : (
               <Button
