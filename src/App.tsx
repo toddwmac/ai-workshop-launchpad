@@ -295,7 +295,7 @@ function App() {
           <p className="text-black">
             Your interactive learning space for exploring AI concepts, tools, and building your AI skills.
           </p>
-          <p className="mt-2 text-black">
+          <p className="mt-0.5 text-black">
             All of the content is free and nothing loads on your machine.
           </p>
         </div>
