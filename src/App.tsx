@@ -270,6 +270,21 @@ function App() {
           />
         </div>
 
+        <div id="learningResources">
+          <Section
+            title="AI Learning Resources"
+            sectionId="learningResources"
+            content={content}
+            onAddItem={handleAddItem}
+            onEditItem={handleEditItem}
+            onDeleteItem={handleDeleteItem}
+            onReorder={handleReorderItems}
+            isAdmin={isAuthenticated}
+            isOpen={openSections.has('learningResources')}
+            onToggle={() => toggleSection('learningResources')}
+          />
+        </div>
+
         <div id="ai-tools">
           <Tools
             tools={aiTools}

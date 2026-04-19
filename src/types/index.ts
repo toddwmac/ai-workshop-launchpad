@@ -5,7 +5,7 @@ export interface ContentItem {
   title: string;
   description: string;
   url?: string; // For link items
-  section: 'mindset' | 'skillSet' | 'toolSet';
+  section: 'mindset' | 'skillSet' | 'toolSet' | 'learningResources';
   createdAt: string;
   updatedAt: string;
 }
@@ -60,7 +60,7 @@ export interface ExportData {
 // Section Component Props
 export interface SectionProps {
   title: string;
-  sectionId: 'mindset' | 'skillSet' | 'toolSet';
+  sectionId: 'mindset' | 'skillSet' | 'toolSet' | 'learningResources';
   content: ContentItem[];
   onAddItem: (item: Omit<ContentItem, 'id' | 'createdAt' | 'updatedAt'>) => void;
   onEditItem: (id: string, item: Partial<ContentItem>) => void;

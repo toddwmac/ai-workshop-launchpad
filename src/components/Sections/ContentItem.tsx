@@ -1,16 +1,15 @@
-import { ExternalLink, FileText, Edit, Trash2 } from 'lucide-react';
+import { ExternalLink, Edit, Trash2 } from 'lucide-react';
 import type { ContentItem } from '../../types';
 import { Card } from '../UI/Card';
 import { Button } from '../UI/Button';
 import { Tag } from '../UI/Tag';
-import clsx from 'clsx';
 
 interface ContentItemProps {
   item: ContentItem;
   onEdit: (item: ContentItem) => void;
   onDelete: (id: string) => void;
   isAdmin: boolean;
-  colorVariant?: 'blue' | 'green' | 'purple';
+  colorVariant?: 'blue' | 'green' | 'purple' | 'teal';
 }
 
 export function ContentItemComponent({ item, onEdit, onDelete, isAdmin, colorVariant }: ContentItemProps) {
@@ -38,19 +37,7 @@ export function ContentItemComponent({ item, onEdit, onDelete, isAdmin, colorVar
         </div>
       )}
 
-      <div className="flex items-start gap-3">
-        <div className={clsx(
-          'mt-1 rounded-lg p-2',
-          item.type === 'link' ? 'bg-brand-blue-100 dark:bg-brand-blue-900' : 'bg-gray-100 dark:bg-gray-700'
-        )}>
-          {item.type === 'link' ? (
-            <ExternalLink className="h-5 w-5 text-brand-blue-500 dark:text-brand-blue-400" />
-          ) : (
-            <FileText className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-          )}
-        </div>
-
-        <div className="flex-1">
+      <div className="flex-1">
           <div className="mb-2 flex items-center gap-2">
             <Tag variant={item.type === 'link' ? 'primary' : 'default'} size="sm">
               {item.type}
@@ -77,7 +64,6 @@ export function ContentItemComponent({ item, onEdit, onDelete, isAdmin, colorVar
             </a>
           )}
         </div>
-      </div>
     </Card>
   );
 }

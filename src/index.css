@@ -37,6 +37,18 @@
   --color-brand-yellow-800: #6e570a;
   --color-brand-yellow-900: #584510;
   --color-brand-yellow-950: #322505;
+
+  --color-brand-teal-50: #edf8fb;
+  --color-brand-teal-100: #d6f2f6;
+  --color-brand-teal-200: #c6eaf1;
+  --color-brand-teal-300: #9dd9e6;
+  --color-brand-teal-400: #6dc5d8;
+  --color-brand-teal-500: #4ab3ca;
+  --color-brand-teal-600: #3a97ad;
+  --color-brand-teal-700: #307b8e;
+  --color-brand-teal-800: #2a6472;
+  --color-brand-teal-900: #25525e;
+  --color-brand-teal-950: #143540;
 }
 
 html {

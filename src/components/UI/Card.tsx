@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import clsx from 'clsx';
 
-type ColorVariant = 'blue' | 'green' | 'purple' | 'default';
+type ColorVariant = 'blue' | 'green' | 'purple' | 'teal' | 'default';
 
 interface CardProps {
   children: ReactNode;
@@ -16,6 +16,7 @@ const colorStyles: Record<ColorVariant, string> = {
   blue: 'border-brand-blue-200 bg-brand-blue-50 dark:border-brand-blue-800 dark:bg-brand-blue-950',
   green: 'border-brand-yellow-200 bg-brand-yellow-50 dark:border-brand-yellow-800 dark:bg-brand-yellow-950',
   purple: 'border-brand-orange-200 bg-brand-orange-50 dark:border-brand-orange-800 dark:bg-brand-orange-950',
+  teal: 'border-brand-teal-200 bg-brand-teal-50 dark:border-brand-teal-800 dark:bg-brand-teal-950',
 };
 
 export function Card({ children, className, hoverable, onClick, colorVariant }: CardProps) {

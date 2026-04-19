@@ -6,7 +6,7 @@ import { Button } from '../UI/Button';
 
 interface ContentFormProps {
   item?: ContentItem;
-  sectionId: 'mindset' | 'skillSet' | 'toolSet';
+  sectionId: 'mindset' | 'skillSet' | 'toolSet' | 'learningResources';
   onSubmit: (item: Omit<ContentItem, 'id' | 'createdAt' | 'updatedAt'>) => void;
   onCancel: () => void;
 }

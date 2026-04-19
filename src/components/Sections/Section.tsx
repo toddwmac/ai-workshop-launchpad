@@ -19,10 +19,11 @@ export function Section({ title, sectionId, content, onAddItem, onEditItem, onDe
   const [draggedId, setDraggedId] = useState<string | null>(null);
   const [dragOverId, setDragOverId] = useState<string | null>(null);
 
-  const sectionColors: Record<string, 'blue' | 'green' | 'purple'> = {
+  const sectionColors: Record<string, 'blue' | 'green' | 'purple' | 'teal'> = {
     mindset: 'blue',
     skillSet: 'green',
     toolSet: 'purple',
+    learningResources: 'teal',
   };
   const colorVariant = sectionColors[sectionId];
 
