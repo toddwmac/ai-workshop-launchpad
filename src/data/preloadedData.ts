@@ -2,10 +2,70 @@ import type { GlossaryTerm, AITool, ContentItem } from '../types';
 
 export const preloadedGlossaryTerms: GlossaryTerm[] = [
   {
+    id: '19',
+    term: 'AGI (Artificial General Intelligence)',
+    definition: 'Hypothetical AI systems with human-level or greater intelligence across all cognitive tasks.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/Artificial_general_intelligence'
+  },
+  {
     id: '1',
     term: 'Artificial Intelligence (AI)',
     definition: 'The simulation of human intelligence processes by computer systems, including learning, reasoning, and self-correction.',
     learnMoreUrl: 'https://en.wikipedia.org/wiki/Artificial_intelligence'
+  },
+  {
+    id: '17',
+    term: 'Bias',
+    definition: 'Systematic errors in AI outputs that reflect prejudices present in training data or model design.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/Bias_(AI)'
+  },
+  {
+    id: '16',
+    term: 'Chain of Thought',
+    definition: 'A prompting technique that encourages AI models to break down complex problems into step-by-step reasoning.',
+    learnMoreUrl: 'https://arxiv.org/abs/2201.11903'
+  },
+  {
+    id: '13',
+    term: 'Context Window',
+    definition: 'The maximum amount of text (in tokens) an AI model can consider when generating a response.',
+    learnMoreUrl: 'https://www.anthropic.com/index/context-window'
+  },
+  {
+    id: '18',
+    term: 'Ethics in AI',
+    definition: 'The study of moral principles and values that should guide the development and use of AI systems.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/AI_ethics'
+  },
+  {
+    id: '15',
+    term: 'Few-shot Learning',
+    definition: 'A learning approach where AI models learn from just a few examples rather than extensive training data.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/Few-shot_learning'
+  },
+  {
+    id: '10',
+    term: 'Fine-tuning',
+    definition: 'The process of further training a pre-trained model on a specific dataset to improve its performance for particular tasks.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/Fine-tuning_(transfer_learning)'
+  },
+  {
+    id: '9',
+    term: 'Hallucination',
+    definition: 'When AI generates confident but incorrect or nonsensical information that appears plausible.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)'
+  },
+  {
+    id: '8',
+    term: 'Inference',
+    definition: 'The process of using a trained AI model to make predictions or generate outputs based on new input data.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/Inference'
+  },
+  {
+    id: '4',
+    term: 'Large Language Model (LLM)',
+    definition: 'A type of AI model trained on vast amounts of text data to understand and generate human-like text.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/Large_language_model'
   },
   {
     id: '2',
@@ -20,10 +80,10 @@ export const preloadedGlossaryTerms: GlossaryTerm[] = [
     learnMoreUrl: 'https://en.wikipedia.org/wiki/Natural_language_processing'
   },
   {
-    id: '4',
-    term: 'Large Language Model (LLM)',
-    definition: 'A type of AI model trained on vast amounts of text data to understand and generate human-like text.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/Large_language_model'
+    id: '6',
+    term: 'Neural Network',
+    definition: 'A computing system inspired by biological neural networks, consisting of interconnected nodes (neurons) that process information.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/Neural_network'
   },
   {
     id: '5',
@@ -32,34 +92,10 @@ export const preloadedGlossaryTerms: GlossaryTerm[] = [
     learnMoreUrl: 'https://en.wikipedia.org/wiki/Prompt_engineering'
   },
   {
-    id: '6',
-    term: 'Neural Network',
-    definition: 'A computing system inspired by biological neural networks, consisting of interconnected nodes (neurons) that process information.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/Neural_network'
-  },
-  {
-    id: '7',
-    term: 'Training Data',
-    definition: 'The dataset used to teach AI models patterns, relationships, and knowledge required for making predictions or decisions.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets'
-  },
-  {
-    id: '8',
-    term: 'Inference',
-    definition: 'The process of using a trained AI model to make predictions or generate outputs based on new input data.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/Inference'
-  },
-  {
-    id: '9',
-    term: 'Hallucination',
-    definition: 'When AI generates confident but incorrect or nonsensical information that appears plausible.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)'
-  },
-  {
-    id: '10',
-    term: 'Fine-tuning',
-    definition: 'The process of further training a pre-trained model on a specific dataset to improve its performance for particular tasks.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/Fine-tuning_(transfer_learning)'
+    id: '12',
+    term: 'Temperature',
+    definition: 'A parameter that controls the randomness of AI-generated text, with lower values producing more deterministic outputs.',
+    learnMoreUrl: 'https://docs.openai.com/api-reference/parameter-details'
   },
   {
     id: '11',
@@ -68,58 +104,22 @@ export const preloadedGlossaryTerms: GlossaryTerm[] = [
     learnMoreUrl: 'https://en.wikipedia.org/wiki/Tokenization_(lexical_analysis)'
   },
   {
-    id: '12',
-    term: 'Temperature',
-    definition: 'A parameter that controls the randomness of AI-generated text, with lower values producing more deterministic outputs.',
-    learnMoreUrl: 'https://docs.openai.com/api-reference/parameter-details'
+    id: '20',
+    term: 'Transformer Architecture',
+    definition: 'A deep learning architecture that uses attention mechanisms to process sequential data, revolutionizing NLP.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)'
   },
   {
-    id: '13',
-    term: 'Context Window',
-    definition: 'The maximum amount of text (in tokens) an AI model can consider when generating a response.',
-    learnMoreUrl: 'https://www.anthropic.com/index/context-window'
+    id: '7',
+    term: 'Training Data',
+    definition: 'The dataset used to teach AI models patterns, relationships, and knowledge required for making predictions or decisions.',
+    learnMoreUrl: 'https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets'
   },
   {
     id: '14',
     term: 'Zero-shot Learning',
     definition: 'The ability of AI models to perform tasks without seeing examples, using only task descriptions.',
     learnMoreUrl: 'https://en.wikipedia.org/wiki/Zero-shot_learning'
-  },
-  {
-    id: '15',
-    term: 'Few-shot Learning',
-    definition: 'A learning approach where AI models learn from just a few examples rather than extensive training data.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/Few-shot_learning'
-  },
-  {
-    id: '16',
-    term: 'Chain of Thought',
-    definition: 'A prompting technique that encourages AI models to break down complex problems into step-by-step reasoning.',
-    learnMoreUrl: 'https://arxiv.org/abs/2201.11903'
-  },
-  {
-    id: '17',
-    term: 'Bias',
-    definition: 'Systematic errors in AI outputs that reflect prejudices present in training data or model design.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/Bias_(AI)'
-  },
-  {
-    id: '18',
-    term: 'Ethics in AI',
-    definition: 'The study of moral principles and values that should guide the development and use of AI systems.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/AI_ethics'
-  },
-  {
-    id: '19',
-    term: 'AGI (Artificial General Intelligence)',
-    definition: 'Hypothetical AI systems with human-level or greater intelligence across all cognitive tasks.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/Artificial_general_intelligence'
-  },
-  {
-    id: '20',
-    term: 'Transformer Architecture',
-    definition: 'A deep learning architecture that uses attention mechanisms to process sequential data, revolutionizing NLP.',
-    learnMoreUrl: 'https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)'
   }
 ];
 
@@ -160,11 +160,46 @@ export const preloadedAITools: AITool[] = [
     url: 'https://gemini.google.com/app'
   },
   {
+    id: '1776536749448',
+    name: 'Grok',
+    category: 'Chatbot',
+    description: 'Class leading edge UI functional',
+    url: 'https://grok.com/'
+  },
+  {
+    id: '1776536612154',
+    name: 'The Other Chatbots - Big guys and little guys',
+    category: 'Chatbot',
+    description: '9 more and some you\'ve probably never seen:\nLe Chat (Mistral), Qwen Studio, Together Chat, Kimi AI, Z.ai, Inception Chat, Chat Jimmy, DeepSeek, Meta',
+    url: 'https://copilot.microsoft.com/shares/pages/2nJ5e8ErWNz5syxHFwmgZ'
+  },
+  {
     id: '4',
     name: 'Notebook LM',
     category: 'Research and Learning',
     description: 'Googles Notebook LM is a bedrock research, students and business people all around the world.',
     url: 'https://notebooklm.google.com/'
+  },
+  {
+    id: '1776537424555',
+    name: 'Elicit - AI for Scientific Research',
+    category: 'Research Bot',
+    description: 'Search and chat with scientific research papers',
+    url: 'https://elicit.com/'
+  },
+  {
+    id: '1776539282190',
+    name: 'Emergent Mind - Frontier AI Research Explorer',
+    category: 'Research Site',
+    description: 'Emergent Mind a curated, continuously updated interface for discovering the newest, most influential, and most-discussed AI research papers.  Auto infographic build feature very powerful.',
+    url: 'https://www.emergentmind.com'
+  },
+  {
+    id: '1776565915879',
+    name: 'Learning about Neural Networks',
+    category: 'Learning',
+    description: 'Not so much an AI tool but a treasure trove of learning resources about Neural Networks, LLMs and Mathematics.\nBrought to you by the genius behind 3Blue1Brown',
+    url: 'https://www.3blue1brown.com/?topic=neural-networks'
   }
 ];
 
@@ -172,19 +207,9 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776459304068',
     type: 'link',
-    title: 'The Newcomer\'s Mind',
+    title: 'The Newcomer\'s Mind - Presentation',
     description: 'A modern take on the Beginner\'s Mind',
-    url: 'https://019d9c37-538e-7fa3-b4ee-9184ad2b0bdd.arena.site/',
-    section: 'mindset',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
-    id: '1776013492100',
-    type: 'link',
-    title: 'The Great Acceleration',
-    description: 'The unprecedented growth of AI in context for Academic leaders, admins and professors',
-    url: 'https://centerforappliedai.com/wp-content/uploads/2026/03/ai-development-pace-report.html',
+    url: 'https://019d9bac-12da-7253-b63e-90dd0b38ef89.arena.site/',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -192,7 +217,7 @@ export const preloadedContent: ContentItem[] = [
   {
     id: 'mindset-2',
     type: 'link',
-    title: 'Put the AI explosion in perspective',
+    title: 'The AI $ explosion in perspective - Substack',
     description: '16 charts that help understand the unprecedented scale of AI investment',
     url: 'https://www.understandingai.org/p/16-charts-that-explain-the-ai-boom?utm_source=substack&utm_medium=email',
     section: 'mindset',
@@ -202,9 +227,19 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776457311218',
     type: 'link',
-    title: 'State of AI in early 26',
+    title: 'State of AI in early 2026 - Report',
     description: 'Stanford\'s 2026 AI index',
     url: 'https://hai.stanford.edu/ai-index/2026-ai-index-report',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776013492100',
+    type: 'link',
+    title: 'The Great Acceleration - Presentation',
+    description: 'The unprecedented growth of AI in context for Academic leaders, admins and professors',
+    url: 'https://centerforappliedai.com/wp-content/uploads/2026/03/ai-development-pace-report.html',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -213,7 +248,7 @@ export const preloadedContent: ContentItem[] = [
     id: '1776014010380',
     type: 'link',
     title: 'An AI Mindset for Higher Education',
-    description: 'A walk through of various dimensions of AI within the educational space.',
+    description: 'A walk through of various dimensions of AI within the educational space.  \n(( The Flashcards feature is not functioning. ))',
     url: 'https://appliedailabs-higher-ed-leaders.bolt.host/',
     section: 'mindset',
     createdAt: new Date().toISOString(),
@@ -222,7 +257,7 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776014747717',
     type: 'link',
-    title: 'Demystifying the AI Brain',
+    title: 'How LLMs Learn  - Presentation',
     description: 'An LLM\'s Journey from Kindergarten to PhD - \nUnderstanding the LLM Training Lifecycle Through the Lens of Human Education',
     url: 'https://lqprzyd6r4n5.space.minimax.io/',
     section: 'mindset',
@@ -250,9 +285,29 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
+    id: '1776471721518',
+    type: 'link',
+    title: 'AI Adaption vs. Adoption Whitepaper - a Google Illuminate Podcast',
+    description: 'A look into how organizations should frame AI if they want to maximize it\'s strategic potential.  Presented using Google Lab\'s Illuminate AI Podcast tool.',
+    url: 'https://illuminate.google.com/library?play=Mg2w9b_Km3Y',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776565319252',
+    type: 'link',
+    title: 'Large Language Models for the Curious Beginner',
+    description: 'The best description of Large Language Models and the Transformer Architecture you will ever find.  (Be sure to watch the video.)',
+    url: 'https://www.3blue1brown.com/lessons/mini-llm',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
     id: '1776014985273',
     type: 'link',
-    title: 'The Art of the Collab',
+    title: 'The Art of the Collab - Presentation',
     description: 'The highest AI art form is quickly becoming ones ability to collaborate with AI and amplify skills, experience and most importantly curiosity.',
     url: 'https://019d9993-d720-70de-ae8e-1693640621e5.arena.site/',
     section: 'skillSet',
@@ -262,7 +317,7 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776457603842',
     type: 'link',
-    title: 'From Tool to Partner',
+    title: 'From Tool to Partner - Presentation',
     description: 'Advancing your AI collaboration skills',
     url: 'https://019d9993-d720-7c5a-8b53-b664111285b9.arena.site/',
     section: 'skillSet',
@@ -272,7 +327,7 @@ export const preloadedContent: ContentItem[] = [
   {
     id: 'skillset-1',
     type: 'link',
-    title: 'Welcome to the world of Chat Bots',
+    title: 'The world of Chat Bots - Presentation',
     description: 'Explore an introduction to chat bots, built by the Claude chat dev bot.  Claude like some of the other models can build artifacts and host them like this one.',
     url: 'https://claude.ai/public/artifacts/373523d7-fbfe-45ba-a2ae-c3ca4c5cde49',
     section: 'skillSet',
@@ -290,10 +345,30 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
+    id: '1776467767086',
+    type: 'link',
+    title: 'Prompting for Professionals - Course',
+    description: 'A Claude based course you can use to dig deeper into prompting patterns and strategies.',
+    url: 'https://claude.ai/public/artifacts/ac2ddf08-4ecf-4a65-928b-8cfcc7ddfa51',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776468124753',
+    type: 'link',
+    title: 'Prompting Patterns - Repository',
+    description: 'Twenty prompting patterns to help you build your own.',
+    url: 'https://claude.ai/public/artifacts/c583835b-7a1e-48cd-8237-12076d7ead10',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
     id: '1776453192186',
     type: 'link',
-    title: 'Newcomer\'s Club Prompting Examples',
-    description: 'A launchpad for several different prompt example pages created by different LLMs.  It\'s a good way to compare prompting styles, as well as give you a sense of the range of design decisions the models might make.',
+    title: 'Newcomer\'s Prompt Collections - Repository',
+    description: 'A launchpad for several prompt created by different LLMs.  It\'s a good way to find starter prompts, compare prompting styles, and give you a sense of the variety of design decisions the models might make.',
     url: 'https://centerforappliedailabs.github.io/resources/Newcomers-activity-prompt-examples-AppliedAILabs.html',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
@@ -302,7 +377,7 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776015372838',
     type: 'link',
-    title: 'Adaption vs. Adoption',
+    title: 'Adaption vs. Adoption - Paper',
     description: 'A whitepaper discussing the merits of Adapting with AI vs. strictly Adopting AI tech.',
     url: 'https://centerforappliedailabs.github.io/resources/Adaption%20vs%20Adoption-AppliedAILabs.pdf',
     section: 'skillSet',
@@ -312,9 +387,29 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776015513476',
     type: 'link',
-    title: 'AI & Leadership',
+    title: 'AI & Leadership - Paper',
     description: 'Written in early 2023, this whitepaper outlines areas of focus for leaders as the AI era begins unfolding.  Not much was written at that time, as we were just getting started.',
     url: 'https://centerforappliedailabs.github.io/resources/Leading%20Through%20the%20Shift%20-AppliedAILabs.pdf',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776465968554',
+    type: 'link',
+    title: 'Prompt Engineering Hub - Repository',
+    description: 'More advanced prompting examples focused on General Text, Reasoning, Coding,\nData Analysis, Multi-modal with a Dynamic refresh option to search for new patterns.',
+    url: 'https://staging-llm-prompt-strategies-web-app-5p2i.frontend.encr.app/',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776558200114',
+    type: 'link',
+    title: 'Prompt Forge -  Repository (Newcomers Edition)',
+    description: 'Advanced prompting techniques and examples extracted from Frontier Model system cards (April 2026)',
+    url: 'https://centerforappliedailabs.github.io/resources/prompt-best-practices-grok-AppliedAILabs.html',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -323,18 +418,8 @@ export const preloadedContent: ContentItem[] = [
     id: 'toolset-1',
     type: 'link',
     title: 'Welcome to the World of AI Chatbots',
-    description: 'This tool, made by AI, to talk about AI, can help orient you to the most foundational element of the AI era...the AI Chat Bot',
+    description: 'This little interactive walkthrough, made by AI, to teach you about AI, can help orient you to the most foundational element of the AI era...the AI Chat Bot',
     url: 'https://claude.ai/public/artifacts/373523d7-fbfe-45ba-a2ae-c3ca4c5cde49',
-    section: 'toolSet',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
-    id: 'toolset-2',
-    type: 'link',
-    title: 'Riding the AI Wave - How to think about tools',
-    description: 'A presentation putting mindset skill set and tool set in context.',
-    url: 'https://019d82fc-4f59-7a91-a9ec-856d92fc1646.arena.site/',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -342,9 +427,19 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776385707633',
     type: 'link',
-    title: 'A Newcomers Guide to AI',
-    description: 'A walk though of some of the topics we discussed in our workshop',
+    title: 'A Newcomers Intro to AI - Course',
+    description: 'A mini course to walk though of some of the topics we discussed in our workshop',
     url: 'https://toddwmac.github.io/ai-newcomer-guide-blink/',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: 'toolset-2',
+    type: 'link',
+    title: 'AI Training for University Administrators',
+    description: 'All AI training is fundamentally the same, it is just the context that changes.',
+    url: 'https://019b969e-b0bc-7f57-a58b-63b34994214f.arena.site/',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -353,7 +448,7 @@ export const preloadedContent: ContentItem[] = [
     id: '1776385879847',
     type: 'link',
     title: 'Google Labs',
-    description: 'A place to explore interesting and quirky AI for teams at Google',
+    description: 'A place to explore interesting and quirky AI tools and experiments from the teams at Google that brought you Notebook LM, Flow and Firebase.  As you look through the tools, look for the tag "Try it now" and that\'s a good chance it\'ll be available.',
     url: 'https://labs.google/',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
@@ -362,8 +457,8 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776461557683',
     type: 'link',
-    title: 'Vibe Tools',
-    description: 'This list is based on tools I use.  The list is not exhaustive and many details are not current.  The tool landscape, especially in the vibe coding space, changes almost weekly.',
+    title: 'Our Vibe Coding Tools List',
+    description: 'What is Vibe coding?  It is a big part of the future of computer programing, without coding.  If you\'ve ever had fun building an Excel macro, or writing a formula, you should be vibe coding.   This list is tools we use.  The list is not exhaustive and many details are not current.  The tool landscape, especially in the vibe coding space, changes almost weekly.',
     url: 'https://centerforappliedailabs.github.io/resources/Vibe%20Coding%202025%20with%20Nav-AppliedAILabs.html',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
@@ -372,9 +467,39 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776461862953',
     type: 'link',
-    title: 'LM Council a multi-model tool',
-    description: 'A unique offering in the LLM space allowing you to access multiple models (8) simultaneously and have those models to communicate amongst themselves.  there is also access to built in benchmarking data  The tool is built and managed by a very small research team in the UK,  They also host the @AIExplained YouTube channel, one of my goto research channels.  There is a limited free tier a unique experience',
+    title: 'LM Council - a multi-model site',
+    description: 'A unique offering in the LLM space, allowing you to access multiple models (8) simultaneously and have those models communicate amongst themselves.  There is also access to built in benchmarking data, image gen, transcription and more.  The tool is built and managed by a very small independent research team in the UK,  They also host the @AIExplained YouTube channel, one of my goto research channels.  There is a limited use free tier.',
     url: 'https://lmcouncil.ai/',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776469023299',
+    type: 'link',
+    title: 'Google Illuminate Podcast - Featuring the Newcomers Feb Newsletter',
+    description: 'Brought to you by the creators of Notebook LM, Google Illuminate is a podcast creation tool designed for researchers and academics but makes a great tool for general use as well.',
+    url: 'https://illuminate.google.com/library?play=2K4geg_hYCZ11',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776469362096',
+    type: 'link',
+    title: 'MAI  (Microsoft AI) Playground',
+    description: 'The term Playground is typically used by frontier model builders to allow people early access to various features and models often free and always interesting to explore.',
+    url: 'https://playground.microsoft.ai/',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776564511547',
+    type: 'link',
+    title: 'Chatbot feature compare',
+    description: 'Feature compare of the Frontier bots',
+    url: 'https://centerforappliedailabs.github.io/resources/ai-feature-comparison-AppliedAILabs.html',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
