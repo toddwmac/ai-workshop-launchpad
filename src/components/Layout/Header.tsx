@@ -22,13 +22,15 @@ interface HeaderProps {
   onLogout: () => void;
   onExport: () => void;
   onNavigate: (id: string) => void;
+  onResetToDefaults: () => void;
   content: ContentItem[];
   glossaryTerms: GlossaryTerm[];
   aiTools: AITool[];
   userPrompts: UserPrompt[];
+  hasEdits: boolean;
 }
 
-export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigate, content, glossaryTerms, aiTools, userPrompts }: HeaderProps) {
+export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigate, onResetToDefaults, content, glossaryTerms, aiTools, userPrompts, hasEdits }: HeaderProps) {
   const [showHelp, setShowHelp] = useState(false);
   const [helpTab, setHelpTab] = useState<'manage' | 'move' | 'backup' | 'vibe'>('manage');
 
@@ -48,7 +50,7 @@ export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigat
                 Newcomers AI Workshop Hub
               </h1>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                by Applied AI Labs
+                by Applied AI Labs{hasEdits && <> <span className="text-xs text-amber-500 dark:text-amber-400">· edited</span> <button onClick={onResetToDefaults} className="text-xs text-gray-400 underline hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300">revert</button></>}
               </p>
             </div>
           </div>

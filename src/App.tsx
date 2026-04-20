@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { Header } from './components/Layout/Header';
 import { Footer } from './components/Layout/Footer';
 import { Section } from './components/Sections/Section';
@@ -29,6 +29,20 @@ function App() {
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [clipboard, setClipboard] = useState<{ items: ContentItem[]; mode: 'copy' | 'move'; sourceSectionId: string } | null>(null);
 
+  const hasEdits = useMemo(() => {
+    if (userPrompts.length > 0) return true;
+    if (content.length !== preloadedContent.length) return true;
+    if (glossaryTerms.length !== preloadedGlossaryTerms.length) return true;
+    if (aiTools.length !== preloadedAITools.length) return true;
+    const preloadedContentIds = new Set(preloadedContent.map(c => c.id));
+    if (content.some(c => !preloadedContentIds.has(c.id))) return true;
+    const preloadedGlossaryIds = new Set(preloadedGlossaryTerms.map(t => t.id));
+    if (glossaryTerms.some(t => !preloadedGlossaryIds.has(t.id))) return true;
+    const preloadedToolIds = new Set(preloadedAITools.map(t => t.id));
+    if (aiTools.some(t => !preloadedToolIds.has(t.id))) return true;
+    return false;
+  }, [content, glossaryTerms, aiTools, userPrompts]);
+
   const toggleSection = useCallback((id: string) => {
     setOpenSections(prev => {
       const next = new Set(prev);
@@ -55,6 +69,17 @@ function App() {
   }, []);
 
   const handleLoginClick = () => login('');
+
+  const handleResetToDefaults = () => {
+    if (confirm('Revert all content to the server defaults? Your local additions and edits will be removed.')) {
+      setContent(preloadedContent);
+      setGlossaryTerms(preloadedGlossaryTerms);
+      setAITools(preloadedAITools);
+      setUserPrompts([]);
+      setSelectedIds(new Set());
+      setClipboard(null);
+    }
+  };
 
   const handleLogout = () => {
     const hasNewContent = content.length > 0 || glossaryTerms.length > 0 || aiTools.length > 0 || userPrompts.length > 0;
@@ -310,10 +335,12 @@ function App() {
         onLogout={handleLogout}
         onExport={() => setShowExport(true)}
         onNavigate={navigateToSection}
+        onResetToDefaults={handleResetToDefaults}
         content={content}
         glossaryTerms={glossaryTerms}
         aiTools={aiTools}
         userPrompts={userPrompts}
+        hasEdits={hasEdits}
       />
 
       <main className="container mx-auto px-4 py-8">
