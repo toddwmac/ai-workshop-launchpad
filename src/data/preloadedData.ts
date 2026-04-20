@@ -160,6 +160,13 @@ export const preloadedAITools: AITool[] = [
     url: 'https://gemini.google.com/app'
   },
   {
+    id: '1776650769156',
+    name: 'Google AI Studio',
+    category: 'AI Studio',
+    description: 'Explore and build on Google\'s diverse set of models and tools.  Vibe , graphics, audio, etc... you\'ll find it all here.',
+    url: 'https://aistudio.google.com/prompts/new_chat'
+  },
+  {
     id: '1776536749448',
     name: 'Grok',
     category: 'Chatbot',
@@ -200,36 +207,44 @@ export const preloadedAITools: AITool[] = [
     category: 'Learning',
     description: 'Not so much an AI tool but a treasure trove of learning resources about Neural Networks, LLMs and Mathematics.\nBrought to you by the genius behind 3Blue1Brown',
     url: 'https://www.3blue1brown.com/?topic=neural-networks'
+  },
+  {
+    id: '1776649530062',
+    name: 'Poe bot hub',
+    category: 'Chatbot Hub',
+    description: 'Poe is not a single model — it\'s a hub for many models.\nSome bots are official (OpenAI, Anthropic, Meta).\nMany bots are user-created, with unknown safety, accuracy, or moderation.',
+    url: 'https://copilot.microsoft.com/shares/pages/2nJ5e8ErWNz5syxHFwmgZ'
   }
 ];
 
 export const preloadedContent: ContentItem[] = [
+  // Mindset
   {
     id: '1776459304068',
     type: 'link',
     title: 'The Newcomer\'s Mind - Presentation',
-    description: 'A modern take on the Beginner\'s Mind',
+    description: 'A modern take on the Beginner\'s Mind and an introduction to your Superpowers.',
     url: 'https://019d9bac-12da-7253-b63e-90dd0b38ef89.arena.site/',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
   {
-    id: 'mindset-2',
+    id: '1776621737798',
     type: 'link',
-    title: 'The AI $ explosion in perspective - Substack',
-    description: '16 charts that help understand the unprecedented scale of AI investment',
-    url: 'https://www.understandingai.org/p/16-charts-that-explain-the-ai-boom?utm_source=substack&utm_medium=email',
+    title: 'From Tool to Partner a Mindset shift - Presentation',
+    description: 'Part of our Thinking-Together series focusing on enhancing our Mindset with AI.',
+    url: 'https://019d9993-d720-7c5a-8b53-b664111285b9.arena.site/',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776457311218',
+    id: '1776013822952',
     type: 'link',
-    title: 'State of AI in early 2026 - Report',
-    description: 'Stanford\'s 2026 AI index',
-    url: 'https://hai.stanford.edu/ai-index/2026-ai-index-report',
+    title: 'AI Explosion - Presentation',
+    description: 'Visualizing the almost impossible to comprehend exponential growth of AI.',
+    url: 'https://019c5da5-956e-740b-b52d-dcfc7e62da3d.arena.site/',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -237,7 +252,7 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776013492100',
     type: 'link',
-    title: 'The Great Acceleration - Presentation',
+    title: 'The Great EDU Acceleration - Presentation',
     description: 'The unprecedented growth of AI in context for Academic leaders, admins and professors',
     url: 'https://centerforappliedai.com/wp-content/uploads/2026/03/ai-development-pace-report.html',
     section: 'mindset',
@@ -247,7 +262,7 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776014010380',
     type: 'link',
-    title: 'An AI Mindset for Higher Education',
+    title: 'An AI Mindset for Higher Education - Mini Course',
     description: 'A walk through of various dimensions of AI within the educational space.  \n(( The Flashcards feature is not functioning. ))',
     url: 'https://appliedailabs-higher-ed-leaders.bolt.host/',
     section: 'mindset',
@@ -265,11 +280,11 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776013822952',
+    id: 'mindset-2',
     type: 'link',
-    title: 'The AI Revolution - Technology\'s Cambrian Period',
-    description: 'Visualizing the unprecedented exponential growth of AI.',
-    url: 'https://019c5da5-956e-740b-b52d-dcfc7e62da3d.arena.site/',
+    title: 'The AI $ explosion in perspective - Substack',
+    description: '16 charts that help understand the unprecedented scale of AI investment',
+    url: 'https://www.understandingai.org/p/16-charts-that-explain-the-ai-boom?utm_source=substack&utm_medium=email',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -285,41 +300,32 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776471721518',
+    id: '1776651293777',
     type: 'link',
-    title: 'AI Adaption vs. Adoption Whitepaper - a Google Illuminate Podcast',
-    description: 'A look into how organizations should frame AI if they want to maximize it\'s strategic potential.  Presented using Google Lab\'s Illuminate AI Podcast tool.',
-    url: 'https://illuminate.google.com/library?play=Mg2w9b_Km3Y',
+    title: 'How LLMs learn to talk - Presentation',
+    description: 'A non-technical take on explaining how LLMs learn to communicate.',
+    url: 'https://aistudio.google.com/prompts/new_chat',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
+  // SkillSet
   {
-    id: '1776565319252',
+    id: '1776622553928',
     type: 'link',
-    title: 'Large Language Models for the Curious Beginner',
-    description: 'The best description of Large Language Models and the Transformer Architecture you will ever find.  (Be sure to watch the video.)',
-    url: 'https://www.3blue1brown.com/lessons/mini-llm',
-    section: 'mindset',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
-    id: '1776014985273',
-    type: 'link',
-    title: 'The Art of the Collab - Presentation',
-    description: 'The highest AI art form is quickly becoming ones ability to collaborate with AI and amplify skills, experience and most importantly curiosity.',
+    title: 'AI as a Collaborator - Presentation',
+    description: 'Thinking-Together Series:  What happens when we shift our thinking from AI as an assistant, to AI as a collaborator.  A lot!',
     url: 'https://019d9993-d720-70de-ae8e-1693640621e5.arena.site/',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776457603842',
+    id: '1776623118132',
     type: 'link',
-    title: 'From Tool to Partner - Presentation',
-    description: 'Advancing your AI collaboration skills',
-    url: 'https://019d9993-d720-7c5a-8b53-b664111285b9.arena.site/',
+    title: 'A Newcomers Intro to AI - Mini Course',
+    description: 'A mini course to walk though of some of the topics we discussed in our workshop',
+    url: 'https://toddwmac.github.io/ai-newcomer-guide-blink/',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -327,7 +333,7 @@ export const preloadedContent: ContentItem[] = [
   {
     id: 'skillset-1',
     type: 'link',
-    title: 'The world of Chat Bots - Presentation',
+    title: 'The World of Chat Bots - Presentation',
     description: 'Explore an introduction to chat bots, built by the Claude chat dev bot.  Claude like some of the other models can build artifacts and host them like this one.',
     url: 'https://claude.ai/public/artifacts/373523d7-fbfe-45ba-a2ae-c3ca4c5cde49',
     section: 'skillSet',
@@ -355,16 +361,6 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776468124753',
-    type: 'link',
-    title: 'Prompting Patterns - Repository',
-    description: 'Twenty prompting patterns to help you build your own.',
-    url: 'https://claude.ai/public/artifacts/c583835b-7a1e-48cd-8237-12076d7ead10',
-    section: 'skillSet',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
     id: '1776453192186',
     type: 'link',
     title: 'Newcomer\'s Prompt Collections - Repository',
@@ -375,21 +371,11 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776015372838',
+    id: '1776468124753',
     type: 'link',
-    title: 'Adaption vs. Adoption - Paper',
-    description: 'A whitepaper discussing the merits of Adapting with AI vs. strictly Adopting AI tech.',
-    url: 'https://centerforappliedailabs.github.io/resources/Adaption%20vs%20Adoption-AppliedAILabs.pdf',
-    section: 'skillSet',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
-    id: '1776015513476',
-    type: 'link',
-    title: 'AI & Leadership - Paper',
-    description: 'Written in early 2023, this whitepaper outlines areas of focus for leaders as the AI era begins unfolding.  Not much was written at that time, as we were just getting started.',
-    url: 'https://centerforappliedailabs.github.io/resources/Leading%20Through%20the%20Shift%20-AppliedAILabs.pdf',
+    title: 'Prompting Patterns - Repository',
+    description: 'Twenty prompting patterns to help you build your own.',
+    url: 'https://claude.ai/public/artifacts/c583835b-7a1e-48cd-8237-12076d7ead10',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -415,6 +401,27 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
+    id: '1776015372838',
+    type: 'link',
+    title: 'Adaption vs. Adoption - Paper',
+    description: 'A whitepaper discussing the merits of Adapting with AI vs. strictly Adopting AI tech.',
+    url: 'https://centerforappliedailabs.github.io/resources/Adaption%20vs%20Adoption-AppliedAILabs.pdf',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776015513476',
+    type: 'link',
+    title: 'AI & Leadership - Paper',
+    description: 'Written in early 2023, this whitepaper outlines areas of focus for leaders as the AI era begins unfolding.  Not much was written at that time, as we were just getting started.',
+    url: 'https://centerforappliedailabs.github.io/resources/Leading%20Through%20the%20Shift%20-AppliedAILabs.pdf',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  // ToolSet
+  {
     id: 'toolset-1',
     type: 'link',
     title: 'Welcome to the World of AI Chatbots',
@@ -425,11 +432,21 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776385707633',
+    id: '1776650230450',
     type: 'link',
-    title: 'A Newcomers Intro to AI - Course',
-    description: 'A mini course to walk though of some of the topics we discussed in our workshop',
-    url: 'https://toddwmac.github.io/ai-newcomer-guide-blink/',
+    title: 'Newcomer Bot Hub',
+    description: 'Use the Newcomer Bot Hub to explore mainstream and edge bots from leading AI labs around the world.  Use the notes feature to track information about the bots.  You info is saved locally.',
+    url: 'https://centerforappliedailabs.github.io/resources/newcomer-bot-hub-AppliedAILabs.html',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776622983044',
+    type: 'link',
+    title: 'Mainstream Chatbot feature compare',
+    description: 'Feature compare of the Frontier bots',
+    url: 'https://centerforappliedailabs.github.io/resources/ai-feature-comparison-AppliedAILabs.html',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -445,16 +462,6 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776385879847',
-    type: 'link',
-    title: 'Google Labs',
-    description: 'A place to explore interesting and quirky AI tools and experiments from the teams at Google that brought you Notebook LM, Flow and Firebase.  As you look through the tools, look for the tag "Try it now" and that\'s a good chance it\'ll be available.',
-    url: 'https://labs.google/',
-    section: 'toolSet',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
     id: '1776461557683',
     type: 'link',
     title: 'Our Vibe Coding Tools List',
@@ -465,11 +472,11 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776461862953',
+    id: '1776385879847',
     type: 'link',
-    title: 'LM Council - a multi-model site',
-    description: 'A unique offering in the LLM space, allowing you to access multiple models (8) simultaneously and have those models communicate amongst themselves.  There is also access to built in benchmarking data, image gen, transcription and more.  The tool is built and managed by a very small independent research team in the UK,  They also host the @AIExplained YouTube channel, one of my goto research channels.  There is a limited use free tier.',
-    url: 'https://lmcouncil.ai/',
+    title: 'Google Labs',
+    description: 'A place to explore interesting and quirky AI tools and experiments from the teams at Google that brought you Notebook LM, Flow and Firebase.  As you look through the tools, look for the tag "Try it now" and that\'s a good chance it\'ll be available.',
+    url: 'https://labs.google/',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -485,22 +492,83 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776469362096',
+    id: '1776461862953',
     type: 'link',
-    title: 'MAI  (Microsoft AI) Playground',
-    description: 'The term Playground is typically used by frontier model builders to allow people early access to various features and models often free and always interesting to explore.',
-    url: 'https://playground.microsoft.ai/',
+    title: 'LM Council - a multi-model site',
+    description: 'A unique offering in the LLM space, allowing you to access multiple models (8) simultaneously and have those models communicate amongst themselves.  There is also access to built in benchmarking data, image gen, transcription and more.  The tool is built and managed by a very small independent research team in the UK,  They also host the @AIExplained YouTube channel, one of my goto research channels.  There is a limited use free tier.',
+    url: 'https://lmcouncil.ai/',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
+  // Learning Resources
   {
-    id: '1776564511547',
+    id: '1776618071977',
     type: 'link',
-    title: 'Chatbot feature compare',
-    description: 'Feature compare of the Frontier bots',
-    url: 'https://centerforappliedailabs.github.io/resources/ai-feature-comparison-AppliedAILabs.html',
-    section: 'toolSet',
+    title: 'AI Velocity - Presentation',
+    description: 'A quick look at AI growth velocity and links to more data',
+    url: 'https://gemini.google.com/share/3e30297a0df8',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776620930131',
+    type: 'link',
+    title: 'AI Explosion - presentation video (no sound)',
+    description: 'Built using the latest AI industry acceleration numbers.  Built on the Emergent.AI system',
+    url: 'https://www.youtube.com/watch?v=LCftwwpnG6M',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776621016829',
+    type: 'link',
+    title: 'State of AI in early 2026 - Report',
+    description: 'Stanford\'s 2026 AI index',
+    url: 'https://hai.stanford.edu/ai-index/2026-ai-index-report',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776621118427',
+    type: 'link',
+    title: 'Large Language Models for the Curious Beginner',
+    description: 'The best description of Large Language Models and the Transformer Architecture you will ever find.  (Be sure to watch the video.)',
+    url: 'https://www.3blue1brown.com/lessons/mini-llm',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776621191138',
+    type: 'link',
+    title: 'AI Adaption vs. Adoption Whitepaper - a Google Illuminate Podcast',
+    description: 'A look into how organizations should frame AI if they want to maximize it\'s strategic potential.  Presented using Google Lab\'s Illuminate AI Podcast tool.',
+    url: 'https://illuminate.google.com/library?play=Mg2w9b_Km3Y',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776622952204',
+    type: 'link',
+    title: 'MAI  (Microsoft AI) Playground',
+    description: 'The term Playground is typically used by frontier model builders to allow people early access to various features and models often free and always interesting to explore.',
+    url: 'https://playground.microsoft.ai/',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776650454736',
+    type: 'link',
+    title: 'Ai2 Playground',
+    description: 'The Ai2 Playground allows you to interact with Ai2\'s large language models in a user-friendly interface without the need to download anything. You can use it to test LLM capabilities and generate text based on prompts.',
+    url: 'https://playground.allenai.org/',
+    section: 'learningResources',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   }

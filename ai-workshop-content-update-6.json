@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportDate": "2026-04-19T18:37:00.487Z",
+  "exportDate": "2026-04-20T03:05:29.570Z",
   "content": [
     {
       "id": "1776459304068",
@@ -113,21 +113,21 @@
       "updatedAt": "2026-04-19T16:44:04.214Z"
     },
     {
-      "id": "1776468124753",
-      "type": "link",
-      "title": "Prompting Patterns - Repository",
-      "description": "Twenty prompting patterns to help you build your own.",
-      "url": "https://claude.ai/public/artifacts/c583835b-7a1e-48cd-8237-12076d7ead10",
-      "section": "skillSet",
-      "createdAt": "2026-04-19T16:44:04.214Z",
-      "updatedAt": "2026-04-19T16:44:04.214Z"
-    },
-    {
       "id": "1776453192186",
       "type": "link",
       "title": "Newcomer's Prompt Collections - Repository",
       "description": "A launchpad for several prompt created by different LLMs.  It's a good way to find starter prompts, compare prompting styles, and give you a sense of the variety of design decisions the models might make.",
       "url": "https://centerforappliedailabs.github.io/resources/Newcomers-activity-prompt-examples-AppliedAILabs.html",
+      "section": "skillSet",
+      "createdAt": "2026-04-19T16:44:04.214Z",
+      "updatedAt": "2026-04-19T16:44:04.214Z"
+    },
+    {
+      "id": "1776468124753",
+      "type": "link",
+      "title": "Prompting Patterns - Repository",
+      "description": "Twenty prompting patterns to help you build your own.",
+      "url": "https://claude.ai/public/artifacts/c583835b-7a1e-48cd-8237-12076d7ead10",
       "section": "skillSet",
       "createdAt": "2026-04-19T16:44:04.214Z",
       "updatedAt": "2026-04-19T16:44:04.214Z"
@@ -163,21 +163,31 @@
       "updatedAt": "2026-04-19T16:44:04.214Z"
     },
     {
+      "type": "link",
+      "title": "Newcomer Bot Hub",
+      "description": "Use the Newcomer Bot Hub to explore mainstream and edge bots from leading AI labs around the world.  Use the notes feature to track information about the bots.  You info is saved locally.",
+      "url": "https://centerforappliedailabs.github.io/resources/newcomer-bot-hub-AppliedAILabs.html",
+      "section": "toolSet",
+      "id": "1776650230450",
+      "createdAt": "2026-04-20T01:57:10.450Z",
+      "updatedAt": "2026-04-20T01:57:10.450Z"
+    },
+    {
+      "id": "1776622983044",
+      "type": "link",
+      "title": "Mainstream Chatbot feature compare",
+      "description": "Feature compare of the Frontier bots",
+      "url": "https://centerforappliedailabs.github.io/resources/ai-feature-comparison-AppliedAILabs.html",
+      "section": "toolSet",
+      "createdAt": "2026-04-19T18:23:03.044Z",
+      "updatedAt": "2026-04-20T01:37:00.514Z"
+    },
+    {
       "id": "toolset-2",
       "type": "link",
       "title": "AI Training for University Administrators",
       "description": "All AI training is fundamentally the same, it is just the context that changes.",
       "url": "https://019b969e-b0bc-7f57-a58b-63b34994214f.arena.site/",
-      "section": "toolSet",
-      "createdAt": "2026-04-19T16:44:04.214Z",
-      "updatedAt": "2026-04-19T16:44:04.214Z"
-    },
-    {
-      "id": "1776385879847",
-      "type": "link",
-      "title": "Google Labs",
-      "description": "A place to explore interesting and quirky AI tools and experiments from the teams at Google that brought you Notebook LM, Flow and Firebase.  As you look through the tools, look for the tag \"Try it now\" and that's a good chance it'll be available.",
-      "url": "https://labs.google/",
       "section": "toolSet",
       "createdAt": "2026-04-19T16:44:04.214Z",
       "updatedAt": "2026-04-19T16:44:04.214Z"
@@ -193,21 +203,11 @@
       "updatedAt": "2026-04-19T16:44:04.214Z"
     },
     {
-      "id": "1776622983044",
+      "id": "1776385879847",
       "type": "link",
-      "title": "Chatbot feature compare",
-      "description": "Feature compare of the Frontier bots",
-      "url": "https://centerforappliedailabs.github.io/resources/ai-feature-comparison-AppliedAILabs.html",
-      "section": "toolSet",
-      "createdAt": "2026-04-19T18:23:03.044Z",
-      "updatedAt": "2026-04-19T18:23:03.044Z"
-    },
-    {
-      "id": "1776461862953",
-      "type": "link",
-      "title": "LM Council - a multi-model site",
-      "description": "A unique offering in the LLM space, allowing you to access multiple models (8) simultaneously and have those models communicate amongst themselves.  There is also access to built in benchmarking data, image gen, transcription and more.  The tool is built and managed by a very small independent research team in the UK,  They also host the @AIExplained YouTube channel, one of my goto research channels.  There is a limited use free tier.",
-      "url": "https://lmcouncil.ai/",
+      "title": "Google Labs",
+      "description": "A place to explore interesting and quirky AI tools and experiments from the teams at Google that brought you Notebook LM, Flow and Firebase.  As you look through the tools, look for the tag \"Try it now\" and that's a good chance it'll be available.",
+      "url": "https://labs.google/",
       "section": "toolSet",
       "createdAt": "2026-04-19T16:44:04.214Z",
       "updatedAt": "2026-04-19T16:44:04.214Z"
@@ -321,6 +321,36 @@
       "section": "skillSet",
       "createdAt": "2026-04-19T16:44:04.214Z",
       "updatedAt": "2026-04-19T16:44:04.214Z"
+    },
+    {
+      "id": "1776461862953",
+      "type": "link",
+      "title": "LM Council - a multi-model site",
+      "description": "A unique offering in the LLM space, allowing you to access multiple models (8) simultaneously and have those models communicate amongst themselves.  There is also access to built in benchmarking data, image gen, transcription and more.  The tool is built and managed by a very small independent research team in the UK,  They also host the @AIExplained YouTube channel, one of my goto research channels.  There is a limited use free tier.",
+      "url": "https://lmcouncil.ai/",
+      "section": "toolSet",
+      "createdAt": "2026-04-19T16:44:04.214Z",
+      "updatedAt": "2026-04-19T16:44:04.214Z"
+    },
+    {
+      "type": "link",
+      "title": "Ai2 Playground",
+      "description": "The Ai2 Playground allows you to interact with Ai2’s large language models in a user-friendly interface without the need to download anything. You can use it to test LLM capabilities and generate text based on prompts.",
+      "url": "https://playground.allenai.org/",
+      "section": "learningResources",
+      "id": "1776650454736",
+      "createdAt": "2026-04-20T02:00:54.736Z",
+      "updatedAt": "2026-04-20T02:01:54.279Z"
+    },
+    {
+      "type": "link",
+      "title": "How LLMs learn to talk - Presentation",
+      "description": "A non-technical take on explaining how LLMs learn to communicate.",
+      "url": "https://aistudio.google.com/prompts/new_chat",
+      "section": "mindset",
+      "id": "1776651293777",
+      "createdAt": "2026-04-20T02:14:53.777Z",
+      "updatedAt": "2026-04-20T02:14:53.777Z"
     }
   ],
   "glossaryTerms": [
@@ -482,6 +512,13 @@
       "url": "https://gemini.google.com/app"
     },
     {
+      "name": "Google AI Studio",
+      "category": "AI Studio",
+      "description": "Explore and build on Google's diverse set of models and tools.  Vibe , graphics, audio, etc... you'll find it all here.",
+      "url": "https://aistudio.google.com/prompts/new_chat",
+      "id": "1776650769156"
+    },
+    {
       "id": "1776536749448",
       "name": "Grok",
       "category": "Chatbot",
@@ -522,6 +559,13 @@
       "category": "Learning",
       "description": "Not so much an AI tool but a treasure trove of learning resources about Neural Networks, LLMs and Mathematics.\nBrought to you by the genius behind 3Blue1Brown",
       "url": "https://www.3blue1brown.com/?topic=neural-networks"
+    },
+    {
+      "name": "Poe bot hub",
+      "category": "Chatbot Hub",
+      "description": "Poe is not a single model — it’s a hub for many models.\nSome bots are official (OpenAI, Anthropic, Meta).\nMany bots are user‑created, with unknown safety, accuracy, or moderation.",
+      "url": "https://copilot.microsoft.com/shares/pages/2nJ5e8ErWNz5syxHFwmgZ",
+      "id": "1776649530062"
     }
   ],
   "userPrompts": []

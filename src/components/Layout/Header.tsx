@@ -50,64 +50,72 @@ export function Header({ isAuthenticated, onLogin, onLogout, onExport, onNavigat
                 Newcomers AI Workshop Hub
               </h1>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                by Applied AI Labs{hasEdits && <> <span className="text-xs text-amber-500 dark:text-amber-400">· edited</span> <button onClick={onResetToDefaults} className="text-xs text-gray-400 underline hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300">revert</button></>}
+                by Applied AI Labs
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <SearchBar
-              content={content}
-              glossaryTerms={glossaryTerms}
-              aiTools={aiTools}
-              userPrompts={userPrompts}
-              onNavigate={onNavigate}
-            />
+          <div className="flex flex-col items-end">
+            <div className="flex items-center gap-3">
+              <SearchBar
+                content={content}
+                glossaryTerms={glossaryTerms}
+                aiTools={aiTools}
+                userPrompts={userPrompts}
+                onNavigate={onNavigate}
+              />
 
-            {isAuthenticated && (
-              <>
+              {isAuthenticated && (
+                <>
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    onClick={() => setShowHelp(true)}
+                    className="hidden sm:flex"
+                  >
+                    <HelpCircle className="mr-2 h-4 w-4" />
+                    Admin Guide
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    onClick={onExport}
+                    className="hidden sm:flex"
+                  >
+                    <Download className="mr-2 h-4 w-4" />
+                    Content Import Export
+                  </Button>
+                </>
+              )}
+
+              {isAuthenticated ? (
                 <Button
                   variant="secondary"
                   size="sm"
-                  onClick={() => setShowHelp(true)}
-                  className="hidden sm:flex"
+                  onClick={onLogout}
                 >
-                  <HelpCircle className="mr-2 h-4 w-4" />
-                  Admin Guide
+                  <LogOut className="mr-2 h-4 w-4" />
+                  Exit Admin Mode
                 </Button>
+              ) : (
                 <Button
-                  variant="secondary"
+                  variant="primary"
                   size="sm"
-                  onClick={onExport}
-                  className="hidden sm:flex"
+                  onClick={onLogin}
                 >
-                  <Download className="mr-2 h-4 w-4" />
-                  Content Import Export
+                  <LogIn className="mr-2 h-4 w-4" />
+                  Local Admin Login
                 </Button>
-              </>
-            )}
+              )}
 
-            {isAuthenticated ? (
-              <Button
-                variant="secondary"
-                size="sm"
-                onClick={onLogout}
-              >
-                <LogOut className="mr-2 h-4 w-4" />
-                Exit Admin Mode
-              </Button>
-            ) : (
-              <Button
-                variant="primary"
-                size="sm"
-                onClick={onLogin}
-              >
-                <LogIn className="mr-2 h-4 w-4" />
-                Local Admin Login
-              </Button>
+              <ThemeToggle />
+            </div>
+            {hasEdits && (
+              <div className="mt-1 w-full flex items-center justify-center gap-1.5">
+                <span className="text-xs text-amber-500 dark:text-amber-400">edited</span>
+                <button onClick={onResetToDefaults} className="text-xs text-gray-400 underline hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300">revert</button>
+              </div>
             )}
-
-            <ThemeToggle />
           </div>
         </div>
       </div>
