@@ -19,7 +19,8 @@ An interactive content management SPA for the Newcomers Club of Park City's AI W
 - Nav links scroll to and open the target section automatically
 
 ### Admin Features
-- No-password admin access — click "Admin Login" to enter admin mode
+- No-password admin access — click "Local Admin Login" to enter admin mode
+- All admin changes are local-only — cannot affect the server or other users
 - Add, edit, and delete content in all sections (Mindset, Skill Set, Tool Set, Other Resources, Glossary, AI Tools)
 - Drag-and-drop reordering of cards within any section (admin only)
 - Multi-select copy/move/delete — select multiple cards, copy or move them to a different section, or bulk delete
@@ -31,6 +32,8 @@ An interactive content management SPA for the Newcomers Club of Park City's AI W
 - Export reminder on exit
 
 ### User Experience
+- Site-wide search — search across all sections, glossary, AI tools, and user prompts; click a result to navigate to it
+- "Edited" badge in header when local content differs from server defaults, with a "revert" link to restore defaults
 - Light/dark theme toggle with proper icon visibility in both modes
 - Fully responsive design
 - Distinct section card colors matching the Newcomers Club logo palette:
