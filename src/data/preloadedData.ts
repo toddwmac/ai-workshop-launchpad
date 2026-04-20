@@ -242,9 +242,29 @@ export const preloadedContent: ContentItem[] = [
   {
     id: '1776013822952',
     type: 'link',
-    title: 'AI Explosion - Presentation',
+    title: 'The AI Revolution - Presentation',
     description: 'Visualizing the almost impossible to comprehend exponential growth of AI.',
     url: 'https://019c5da5-956e-740b-b52d-dcfc7e62da3d.arena.site/',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776689475628',
+    type: 'link',
+    title: '36 months that changed the world - Presentation',
+    description: 'How 3 years changes everything and why it is only getting more exciting.',
+    url: 'https://019c51dc-7ba4-742c-9394-608364a611ff.arena.site/',
+    section: 'mindset',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: 'mindset-2',
+    type: 'link',
+    title: 'The AI $ explosion in perspective - Substack',
+    description: '16 charts that help understand the unprecedented scale of AI investment',
+    url: 'https://www.understandingai.org/p/16-charts-that-explain-the-ai-boom?utm_source=substack&utm_medium=email',
     section: 'mindset',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -280,16 +300,6 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: 'mindset-2',
-    type: 'link',
-    title: 'The AI $ explosion in perspective - Substack',
-    description: '16 charts that help understand the unprecedented scale of AI investment',
-    url: 'https://www.understandingai.org/p/16-charts-that-explain-the-ai-boom?utm_source=substack&utm_medium=email',
-    section: 'mindset',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
     id: 'mindset-1',
     type: 'link',
     title: 'The AI Mindset - a Whitepaper collection',
@@ -299,17 +309,37 @@ export const preloadedContent: ContentItem[] = [
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
+  // SkillSet
   {
-    id: '1776651293777',
+    id: '1776623118132',
     type: 'link',
-    title: 'How LLMs learn to talk - Presentation',
-    description: 'A non-technical take on explaining how LLMs learn to communicate.',
-    url: 'https://aistudio.google.com/prompts/new_chat',
-    section: 'mindset',
+    title: 'A Newcomers Intro to AI - Mini Course',
+    description: 'A mini course to walk though of some of the topics we discussed in our workshop',
+    url: 'https://toddwmac.github.io/ai-newcomer-guide-blink/',
+    section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
-  // SkillSet
+  {
+    id: '1776453192186',
+    type: 'link',
+    title: 'Newcomer\'s Prompt Collections - Repository',
+    description: 'A launchpad for several prompt created by different LLMs.  It\'s a good way to find starter prompts, compare prompting styles, and give you a sense of the variety of design decisions the models might make.',
+    url: 'https://centerforappliedailabs.github.io/resources/Newcomers-activity-prompt-examples-AppliedAILabs.html',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776558200114',
+    type: 'link',
+    title: 'Prompt Forge -  Repository (Newcomers Edition)',
+    description: 'Advanced prompting techniques and examples extracted from Frontier Model system cards (April 2026)',
+    url: 'https://centerforappliedailabs.github.io/resources/prompt-best-practices-grok-AppliedAILabs.html',
+    section: 'skillSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
   {
     id: '1776622553928',
     type: 'link',
@@ -321,11 +351,11 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776623118132',
+    id: '1776689939000',
     type: 'link',
-    title: 'A Newcomers Intro to AI - Mini Course',
-    description: 'A mini course to walk though of some of the topics we discussed in our workshop',
-    url: 'https://toddwmac.github.io/ai-newcomer-guide-blink/',
+    title: 'AI Training for University Administrators',
+    description: 'All AI training is fundamentally the same, it is just the context that changes.',
+    url: 'https://019b969e-b0bc-7f57-a58b-63b34994214f.arena.site/',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -361,16 +391,6 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776453192186',
-    type: 'link',
-    title: 'Newcomer\'s Prompt Collections - Repository',
-    description: 'A launchpad for several prompt created by different LLMs.  It\'s a good way to find starter prompts, compare prompting styles, and give you a sense of the variety of design decisions the models might make.',
-    url: 'https://centerforappliedailabs.github.io/resources/Newcomers-activity-prompt-examples-AppliedAILabs.html',
-    section: 'skillSet',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
     id: '1776468124753',
     type: 'link',
     title: 'Prompting Patterns - Repository',
@@ -391,11 +411,11 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: '1776558200114',
+    id: '1776689519299',
     type: 'link',
-    title: 'Prompt Forge -  Repository (Newcomers Edition)',
-    description: 'Advanced prompting techniques and examples extracted from Frontier Model system cards (April 2026)',
-    url: 'https://centerforappliedailabs.github.io/resources/prompt-best-practices-grok-AppliedAILabs.html',
+    title: 'How LLMs learn to talk - Presentation',
+    description: 'A non-technical take on explaining how LLMs learn to communicate.',
+    url: 'https://aistudio.google.com/prompts/new_chat',
     section: 'skillSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -422,16 +442,6 @@ export const preloadedContent: ContentItem[] = [
   },
   // ToolSet
   {
-    id: 'toolset-1',
-    type: 'link',
-    title: 'Welcome to the World of AI Chatbots',
-    description: 'This little interactive walkthrough, made by AI, to teach you about AI, can help orient you to the most foundational element of the AI era...the AI Chat Bot',
-    url: 'https://claude.ai/public/artifacts/373523d7-fbfe-45ba-a2ae-c3ca4c5cde49',
-    section: 'toolSet',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
     id: '1776650230450',
     type: 'link',
     title: 'Newcomer Bot Hub',
@@ -452,21 +462,31 @@ export const preloadedContent: ContentItem[] = [
     updatedAt: new Date().toISOString()
   },
   {
-    id: 'toolset-2',
-    type: 'link',
-    title: 'AI Training for University Administrators',
-    description: 'All AI training is fundamentally the same, it is just the context that changes.',
-    url: 'https://019b969e-b0bc-7f57-a58b-63b34994214f.arena.site/',
-    section: 'toolSet',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
     id: '1776461557683',
     type: 'link',
     title: 'Our Vibe Coding Tools List',
     description: 'What is Vibe coding?  It is a big part of the future of computer programing, without coding.  If you\'ve ever had fun building an Excel macro, or writing a formula, you should be vibe coding.   This list is tools we use.  The list is not exhaustive and many details are not current.  The tool landscape, especially in the vibe coding space, changes almost weekly.',
     url: 'https://centerforappliedailabs.github.io/resources/Vibe%20Coding%202025%20with%20Nav-AppliedAILabs.html',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776695047794',
+    type: 'link',
+    title: 'LM Arena Model Battle Playground',
+    description: 'Explore, play, build and vote on frontier AI with models.',
+    url: 'https://arena.ai/',
+    section: 'toolSet',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776461862953',
+    type: 'link',
+    title: 'LM Council - a multi-model site',
+    description: 'A unique offering in the LLM space, allowing you to access multiple models (8) simultaneously and have those models communicate amongst themselves.  There is also access to built in benchmarking data, image gen, transcription and more.  The tool is built and managed by a very small independent research team in the UK,  They also host the @AIExplained YouTube channel, one of my goto research channels.  There is a limited use free tier.',
+    url: 'https://lmcouncil.ai/',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -487,16 +507,6 @@ export const preloadedContent: ContentItem[] = [
     title: 'Google Illuminate Podcast - Featuring the Newcomers Feb Newsletter',
     description: 'Brought to you by the creators of Notebook LM, Google Illuminate is a podcast creation tool designed for researchers and academics but makes a great tool for general use as well.',
     url: 'https://illuminate.google.com/library?play=2K4geg_hYCZ11',
-    section: 'toolSet',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
-    id: '1776461862953',
-    type: 'link',
-    title: 'LM Council - a multi-model site',
-    description: 'A unique offering in the LLM space, allowing you to access multiple models (8) simultaneously and have those models communicate amongst themselves.  There is also access to built in benchmarking data, image gen, transcription and more.  The tool is built and managed by a very small independent research team in the UK,  They also host the @AIExplained YouTube channel, one of my goto research channels.  There is a limited use free tier.',
-    url: 'https://lmcouncil.ai/',
     section: 'toolSet',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -568,6 +578,56 @@ export const preloadedContent: ContentItem[] = [
     title: 'Ai2 Playground',
     description: 'The Ai2 Playground allows you to interact with Ai2\'s large language models in a user-friendly interface without the need to download anything. You can use it to test LLM capabilities and generate text based on prompts.',
     url: 'https://playground.allenai.org/',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776694414599',
+    type: 'link',
+    title: 'LM Arena Example Workshop Hub Chat History  (may not work)',
+    description: 'See example working hubs  1 and 2',
+    url: 'https://arena.ai/c/019d73c6-3237-7fe8-a3f4-e3dffb821e28',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776694588639',
+    type: 'link',
+    title: 'Example working hub 1',
+    description: 'LM Arena Example Hub 1  GPT 5 based',
+    url: 'https://019d73c6-4da6-7142-b32a-0c8f1b00b062.arena.site/',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776694799829',
+    type: 'link',
+    title: 'Example Working hub 2',
+    description: 'LM Arena Gemini based',
+    url: 'https://019d73c6-4da6-7176-879b-0a97baec29fc.arena.site/',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776695612486',
+    type: 'link',
+    title: 'Gemini Deck Creation Example',
+    description: 'Walking Gemini through a deck build  (may not be exposed to the public)',
+    url: 'https://gemini.google.com/share/3052dfd6df2c',
+    section: 'learningResources',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  },
+  {
+    id: '1776696333272',
+    type: 'link',
+    title: 'AI Growth Fundaments - Gemini and Google Slides',
+    description: 'A high level look at ai expansion',
+    url: 'https://docs.google.com/presentation/d/1ySpQkzBaN5qKZu27lNpiEsXiPcQKrBKzDqNVwmAJG84/edit?usp=sharing',
     section: 'learningResources',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
